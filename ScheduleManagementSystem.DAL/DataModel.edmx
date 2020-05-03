@@ -1,0 +1,2464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tActivity">
+          <Key>
+            <PropertyRef Name="ActivityID" />
+          </Key>
+          <Property Name="ActivityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ActivityName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ActivityNameRu" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tDegree">
+          <Key>
+            <PropertyRef Name="DegreeID" />
+          </Key>
+          <Property Name="DegreeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DegreeName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tDistrib">
+          <Key>
+            <PropertyRef Name="DistribID" />
+          </Key>
+          <Property Name="DistribID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherID" Type="int" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="ProfessionID" Type="int" Nullable="false" />
+          <Property Name="SemesterID" Type="int" Nullable="false" />
+          <Property Name="ActivityID" Type="int" Nullable="false" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="SubGroupID" Type="int" />
+          <Property Name="Hour" Type="float" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tFaculty">
+          <Key>
+            <PropertyRef Name="FacultyID" />
+          </Key>
+          <Property Name="FacultyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FacultyFullName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="FacultyName" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tGrade">
+          <Key>
+            <PropertyRef Name="GradeID" />
+          </Key>
+          <Property Name="GradeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GradeName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GradeNameRu" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ProfessionID" Type="int" />
+          <Property Name="GroupAmount" Type="int" />
+          <Property Name="GradeID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="GroupPart" Type="float" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tLoginInfo">
+          <Key>
+            <PropertyRef Name="LoginID" />
+          </Key>
+          <Property Name="LoginID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="UserPassword" Type="varbinary(max)" Nullable="false" />
+          <Property Name="RoleID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tNorm">
+          <Key>
+            <PropertyRef Name="NormID" />
+          </Key>
+          <Property Name="NormID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NormName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tNormPosition">
+          <Key>
+            <PropertyRef Name="NormPositionID" />
+          </Key>
+          <Property Name="NormID" Type="int" Nullable="false" />
+          <Property Name="PositionID" Type="int" Nullable="false" />
+          <Property Name="Hour" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="NormPositionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tPosition">
+          <Key>
+            <PropertyRef Name="PositionID" />
+          </Key>
+          <Property Name="PositionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PositionName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tProfession">
+          <Key>
+            <PropertyRef Name="ProfessionID" />
+          </Key>
+          <Property Name="ProfessionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProfessionFullName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ProfessionName" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProfessionCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FacultyID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tPulpit">
+          <Key>
+            <PropertyRef Name="PulpitID" />
+          </Key>
+          <Property Name="PulpitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PulpitFullName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PulpitName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="FacultyID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="RoleDesc" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSemester">
+          <Key>
+            <PropertyRef Name="SemesterID" />
+          </Key>
+          <Property Name="SemesterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SemesterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SemesterNameRu" Type="nvarchar" MaxLength="255" />
+          <Property Name="GradeID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tStream">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="StreamID" Type="int" Nullable="false" />
+          <Property Name="StreamStructure" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="StreamSubject" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PulpitID" Type="int" />
+          <Property Name="SemesterID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSubGroup">
+          <Key>
+            <PropertyRef Name="SubGroupID" />
+          </Key>
+          <Property Name="SubGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubGroupName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="SubGroupAmount" Type="int" />
+          <Property Name="SubGroupPart" Type="float" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSubject">
+          <Key>
+            <PropertyRef Name="SubjectID" />
+          </Key>
+          <Property Name="SubjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubjectFullName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SubjectName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSubjectActivity">
+          <Key>
+            <PropertyRef Name="SubjActID" />
+          </Key>
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="ActivityID" Type="int" Nullable="false" />
+          <Property Name="ProfessionID" Type="int" Nullable="false" />
+          <Property Name="Hour" Type="int" />
+          <Property Name="SemesterID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="SubjActID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSubjectProfession">
+          <Key>
+            <PropertyRef Name="SubjectProfessionID" />
+          </Key>
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="ProfessionID" Type="int" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="SubjectProfessionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSubjectTeacher">
+          <Key>
+            <PropertyRef Name="SubjectTeacherID" />
+          </Key>
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="TeacherID" Type="int" Nullable="false" />
+          <Property Name="StreamID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="SubjectTeacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tTeacher">
+          <Key>
+            <PropertyRef Name="TeacherID" />
+          </Key>
+          <Property Name="TeacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherFullName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PulpitID" Type="int" />
+          <Property Name="PositionID" Type="int" />
+          <Property Name="TitleID" Type="int" />
+          <Property Name="DegreeID" Type="int" />
+          <Property Name="NormID" Type="int" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tTitle">
+          <Key>
+            <PropertyRef Name="TitleID" />
+          </Key>
+          <Property Name="TitleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TitleName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedByID" Type="int" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSubjectPrev">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="specName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DisciplineName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ExamSem" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreditSem" Type="nvarchar" MaxLength="255" />
+          <Property Name="TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="AudutoriumHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="LecturesHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="LabHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="PracticHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="SeminarHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="first_gr_first_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="first_gr_first_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="first_gr_second_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="first_gr_second_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="second_gr_third_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="second_gr_third_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="second_gr_fourth_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="second_gr_fourth_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="third_gr_fifth_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="third_gr_fifth_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="third_gr_sixth_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="third_gr_sixth_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="fourth_gr_seventh_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="fourth_gr_seventh_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="fourth_gr_eighth_sem_TotalHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="fourth_gr_eighth_sem_AudHour" Type="nvarchar" MaxLength="255" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tDistrib_tActivity">
+          <End Role="tActivity" Type="Self.tActivity" Multiplicity="1" />
+          <End Role="tDistrib" Type="Self.tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tActivity">
+              <PropertyRef Name="ActivityID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="ActivityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tGroup">
+          <End Role="tGroup" Type="Self.tGroup" Multiplicity="0..1" />
+          <End Role="tDistrib" Type="Self.tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGroup">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tProfession">
+          <End Role="tProfession" Type="Self.tProfession" Multiplicity="1" />
+          <End Role="tDistrib" Type="Self.tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tSemester">
+          <End Role="tSemester" Type="Self.tSemester" Multiplicity="1" />
+          <End Role="tDistrib" Type="Self.tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSemester">
+              <PropertyRef Name="SemesterID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="SemesterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tSubGroup">
+          <End Role="tSubGroup" Type="Self.tSubGroup" Multiplicity="0..1" />
+          <End Role="tDistrib" Type="Self.tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubGroup">
+              <PropertyRef Name="SubGroupID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="SubGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tSubject">
+          <End Role="tSubject" Type="Self.tSubject" Multiplicity="1" />
+          <End Role="tDistrib" Type="Self.tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tTeacher">
+          <End Role="tTeacher" Type="Self.tTeacher" Multiplicity="1" />
+          <End Role="tDistrib" Type="Self.tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTeacher">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGroup_tGrade">
+          <End Role="tGrade" Type="Self.tGrade" Multiplicity="0..1" />
+          <End Role="tGroup" Type="Self.tGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGrade">
+              <PropertyRef Name="GradeID" />
+            </Principal>
+            <Dependent Role="tGroup">
+              <PropertyRef Name="GradeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGroup_tProfession">
+          <End Role="tProfession" Type="Self.tProfession" Multiplicity="0..1" />
+          <End Role="tGroup" Type="Self.tGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tGroup">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tLoginInfo_tRole">
+          <End Role="tRole" Type="Self.tRole" Multiplicity="0..1" />
+          <End Role="tLoginInfo" Type="Self.tLoginInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tRole">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="tLoginInfo">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNormPosition_tNorm">
+          <End Role="tNorm" Type="Self.tNorm" Multiplicity="1" />
+          <End Role="tNormPosition" Type="Self.tNormPosition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNorm">
+              <PropertyRef Name="NormID" />
+            </Principal>
+            <Dependent Role="tNormPosition">
+              <PropertyRef Name="NormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNormPosition_tPosition">
+          <End Role="tPosition" Type="Self.tPosition" Multiplicity="1" />
+          <End Role="tNormPosition" Type="Self.tNormPosition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPosition">
+              <PropertyRef Name="PositionID" />
+            </Principal>
+            <Dependent Role="tNormPosition">
+              <PropertyRef Name="PositionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tProfession_tFaculty">
+          <End Role="tFaculty" Type="Self.tFaculty" Multiplicity="0..1" />
+          <End Role="tProfession" Type="Self.tProfession" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tFaculty">
+              <PropertyRef Name="FacultyID" />
+            </Principal>
+            <Dependent Role="tProfession">
+              <PropertyRef Name="FacultyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tPulpit_tFaculty">
+          <End Role="tFaculty" Type="Self.tFaculty" Multiplicity="0..1" />
+          <End Role="tPulpit" Type="Self.tPulpit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tFaculty">
+              <PropertyRef Name="FacultyID" />
+            </Principal>
+            <Dependent Role="tPulpit">
+              <PropertyRef Name="FacultyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSemester_tGrade">
+          <End Role="tGrade" Type="Self.tGrade" Multiplicity="0..1" />
+          <End Role="tSemester" Type="Self.tSemester" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGrade">
+              <PropertyRef Name="GradeID" />
+            </Principal>
+            <Dependent Role="tSemester">
+              <PropertyRef Name="GradeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tStream_tPulpit">
+          <End Role="tPulpit" Type="Self.tPulpit" Multiplicity="0..1" />
+          <End Role="tStream" Type="Self.tStream" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPulpit">
+              <PropertyRef Name="PulpitID" />
+            </Principal>
+            <Dependent Role="tStream">
+              <PropertyRef Name="PulpitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tStream_tSemester">
+          <End Role="tSemester" Type="Self.tSemester" Multiplicity="0..1" />
+          <End Role="tStream" Type="Self.tStream" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSemester">
+              <PropertyRef Name="SemesterID" />
+            </Principal>
+            <Dependent Role="tStream">
+              <PropertyRef Name="SemesterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubGroup_tGroup">
+          <End Role="tGroup" Type="Self.tGroup" Multiplicity="0..1" />
+          <End Role="tSubGroup" Type="Self.tSubGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGroup">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="tSubGroup">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectActivity_tActivity">
+          <End Role="tActivity" Type="Self.tActivity" Multiplicity="1" />
+          <End Role="tSubjectActivity" Type="Self.tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tActivity">
+              <PropertyRef Name="ActivityID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="ActivityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectActivity_tProfession">
+          <End Role="tProfession" Type="Self.tProfession" Multiplicity="1" />
+          <End Role="tSubjectActivity" Type="Self.tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectActivity_tSemester">
+          <End Role="tSemester" Type="Self.tSemester" Multiplicity="0..1" />
+          <End Role="tSubjectActivity" Type="Self.tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSemester">
+              <PropertyRef Name="SemesterID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="SemesterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectActivity_tSubject">
+          <End Role="tSubject" Type="Self.tSubject" Multiplicity="1" />
+          <End Role="tSubjectActivity" Type="Self.tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectProfession_tProfession">
+          <End Role="tProfession" Type="Self.tProfession" Multiplicity="1" />
+          <End Role="tSubjectProfession" Type="Self.tSubjectProfession" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tSubjectProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectProfession_tSubject">
+          <End Role="tSubject" Type="Self.tSubject" Multiplicity="1" />
+          <End Role="tSubjectProfession" Type="Self.tSubjectProfession" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tSubjectProfession">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectTeacher_tSubject">
+          <End Role="tSubject" Type="Self.tSubject" Multiplicity="1" />
+          <End Role="tSubjectTeacher" Type="Self.tSubjectTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tSubjectTeacher">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectTeacher_tTeacher">
+          <End Role="tTeacher" Type="Self.tTeacher" Multiplicity="1" />
+          <End Role="tSubjectTeacher" Type="Self.tSubjectTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTeacher">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="tSubjectTeacher">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tDegree">
+          <End Role="tDegree" Type="Self.tDegree" Multiplicity="0..1" />
+          <End Role="tTeacher" Type="Self.tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDegree">
+              <PropertyRef Name="DegreeID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="DegreeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tNorm">
+          <End Role="tNorm" Type="Self.tNorm" Multiplicity="0..1" />
+          <End Role="tTeacher" Type="Self.tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNorm">
+              <PropertyRef Name="NormID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="NormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tPosition">
+          <End Role="tPosition" Type="Self.tPosition" Multiplicity="0..1" />
+          <End Role="tTeacher" Type="Self.tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPosition">
+              <PropertyRef Name="PositionID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="PositionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tPulpit">
+          <End Role="tPulpit" Type="Self.tPulpit" Multiplicity="0..1" />
+          <End Role="tTeacher" Type="Self.tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPulpit">
+              <PropertyRef Name="PulpitID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="PulpitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tTitle">
+          <End Role="tTitle" Type="Self.tTitle" Multiplicity="0..1" />
+          <End Role="tTeacher" Type="Self.tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTitle">
+              <PropertyRef Name="TitleID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="TitleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="CreateHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetGroupSubGroupList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetNormPositionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetStreamList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetSubjectActivityList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetSubjectList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetSubjectProfessionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetTeacherList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetTeacherSubjectList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spGetDistribListSubjectOnly" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dms" />
+        <Function Name="spLoadSubjectFromWeb" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dms" />
+        <Function Name="spLoadtSubject1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dms" />
+        <EntityContainer Name="DataModelStoreContainer">
+          <EntitySet Name="tActivity" EntityType="Self.tActivity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tDegree" EntityType="Self.tDegree" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tDistrib" EntityType="Self.tDistrib" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tFaculty" EntityType="Self.tFaculty" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tGrade" EntityType="Self.tGrade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tGroup" EntityType="Self.tGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tLoginInfo" EntityType="Self.tLoginInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tNorm" EntityType="Self.tNorm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tNormPosition" EntityType="Self.tNormPosition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPosition" EntityType="Self.tPosition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tProfession" EntityType="Self.tProfession" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tPulpit" EntityType="Self.tPulpit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tRole" EntityType="Self.tRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSemester" EntityType="Self.tSemester" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tStream" EntityType="Self.tStream" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSubGroup" EntityType="Self.tSubGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSubject" EntityType="Self.tSubject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSubjectActivity" EntityType="Self.tSubjectActivity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSubjectProfession" EntityType="Self.tSubjectProfession" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSubjectTeacher" EntityType="Self.tSubjectTeacher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tTeacher" EntityType="Self.tTeacher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tTitle" EntityType="Self.tTitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tSubjectPrev" EntityType="Self.tSubjectPrev" Schema="stg" store:Type="Tables" />
+          <AssociationSet Name="FK_tDistrib_tActivity" Association="Self.FK_tDistrib_tActivity">
+            <End Role="tActivity" EntitySet="tActivity" />
+            <End Role="tDistrib" EntitySet="tDistrib" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tGroup" Association="Self.FK_tDistrib_tGroup">
+            <End Role="tGroup" EntitySet="tGroup" />
+            <End Role="tDistrib" EntitySet="tDistrib" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tProfession" Association="Self.FK_tDistrib_tProfession">
+            <End Role="tProfession" EntitySet="tProfession" />
+            <End Role="tDistrib" EntitySet="tDistrib" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tSemester" Association="Self.FK_tDistrib_tSemester">
+            <End Role="tSemester" EntitySet="tSemester" />
+            <End Role="tDistrib" EntitySet="tDistrib" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tSubGroup" Association="Self.FK_tDistrib_tSubGroup">
+            <End Role="tSubGroup" EntitySet="tSubGroup" />
+            <End Role="tDistrib" EntitySet="tDistrib" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tSubject" Association="Self.FK_tDistrib_tSubject">
+            <End Role="tSubject" EntitySet="tSubject" />
+            <End Role="tDistrib" EntitySet="tDistrib" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tTeacher" Association="Self.FK_tDistrib_tTeacher">
+            <End Role="tTeacher" EntitySet="tTeacher" />
+            <End Role="tDistrib" EntitySet="tDistrib" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGroup_tGrade" Association="Self.FK_tGroup_tGrade">
+            <End Role="tGrade" EntitySet="tGrade" />
+            <End Role="tGroup" EntitySet="tGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGroup_tProfession" Association="Self.FK_tGroup_tProfession">
+            <End Role="tProfession" EntitySet="tProfession" />
+            <End Role="tGroup" EntitySet="tGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tLoginInfo_tRole" Association="Self.FK_tLoginInfo_tRole">
+            <End Role="tRole" EntitySet="tRole" />
+            <End Role="tLoginInfo" EntitySet="tLoginInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNormPosition_tNorm" Association="Self.FK_tNormPosition_tNorm">
+            <End Role="tNorm" EntitySet="tNorm" />
+            <End Role="tNormPosition" EntitySet="tNormPosition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNormPosition_tPosition" Association="Self.FK_tNormPosition_tPosition">
+            <End Role="tPosition" EntitySet="tPosition" />
+            <End Role="tNormPosition" EntitySet="tNormPosition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tProfession_tFaculty" Association="Self.FK_tProfession_tFaculty">
+            <End Role="tFaculty" EntitySet="tFaculty" />
+            <End Role="tProfession" EntitySet="tProfession" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tPulpit_tFaculty" Association="Self.FK_tPulpit_tFaculty">
+            <End Role="tFaculty" EntitySet="tFaculty" />
+            <End Role="tPulpit" EntitySet="tPulpit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSemester_tGrade" Association="Self.FK_tSemester_tGrade">
+            <End Role="tGrade" EntitySet="tGrade" />
+            <End Role="tSemester" EntitySet="tSemester" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tStream_tPulpit" Association="Self.FK_tStream_tPulpit">
+            <End Role="tPulpit" EntitySet="tPulpit" />
+            <End Role="tStream" EntitySet="tStream" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tStream_tSemester" Association="Self.FK_tStream_tSemester">
+            <End Role="tSemester" EntitySet="tSemester" />
+            <End Role="tStream" EntitySet="tStream" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubGroup_tGroup" Association="Self.FK_tSubGroup_tGroup">
+            <End Role="tGroup" EntitySet="tGroup" />
+            <End Role="tSubGroup" EntitySet="tSubGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectActivity_tActivity" Association="Self.FK_tSubjectActivity_tActivity">
+            <End Role="tActivity" EntitySet="tActivity" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectActivity_tProfession" Association="Self.FK_tSubjectActivity_tProfession">
+            <End Role="tProfession" EntitySet="tProfession" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectActivity_tSemester" Association="Self.FK_tSubjectActivity_tSemester">
+            <End Role="tSemester" EntitySet="tSemester" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectActivity_tSubject" Association="Self.FK_tSubjectActivity_tSubject">
+            <End Role="tSubject" EntitySet="tSubject" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectProfession_tProfession" Association="Self.FK_tSubjectProfession_tProfession">
+            <End Role="tProfession" EntitySet="tProfession" />
+            <End Role="tSubjectProfession" EntitySet="tSubjectProfession" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectProfession_tSubject" Association="Self.FK_tSubjectProfession_tSubject">
+            <End Role="tSubject" EntitySet="tSubject" />
+            <End Role="tSubjectProfession" EntitySet="tSubjectProfession" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectTeacher_tSubject" Association="Self.FK_tSubjectTeacher_tSubject">
+            <End Role="tSubject" EntitySet="tSubject" />
+            <End Role="tSubjectTeacher" EntitySet="tSubjectTeacher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectTeacher_tTeacher" Association="Self.FK_tSubjectTeacher_tTeacher">
+            <End Role="tTeacher" EntitySet="tTeacher" />
+            <End Role="tSubjectTeacher" EntitySet="tSubjectTeacher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tDegree" Association="Self.FK_tTeacher_tDegree">
+            <End Role="tDegree" EntitySet="tDegree" />
+            <End Role="tTeacher" EntitySet="tTeacher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tNorm" Association="Self.FK_tTeacher_tNorm">
+            <End Role="tNorm" EntitySet="tNorm" />
+            <End Role="tTeacher" EntitySet="tTeacher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tPosition" Association="Self.FK_tTeacher_tPosition">
+            <End Role="tPosition" EntitySet="tPosition" />
+            <End Role="tTeacher" EntitySet="tTeacher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tPulpit" Association="Self.FK_tTeacher_tPulpit">
+            <End Role="tPulpit" EntitySet="tPulpit" />
+            <End Role="tTeacher" EntitySet="tTeacher" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tTitle" Association="Self.FK_tTeacher_tTitle">
+            <End Role="tTitle" EntitySet="tTitle" />
+            <End Role="tTeacher" EntitySet="tTeacher" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tActivity">
+          <Key>
+            <PropertyRef Name="ActivityID" />
+          </Key>
+          <Property Name="ActivityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ActivityName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActivityNameRu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tDistribs" Relationship="DataModel.FK_tDistrib_tActivity" FromRole="tActivity" ToRole="tDistrib" />
+          <NavigationProperty Name="tSubjectActivities" Relationship="DataModel.FK_tSubjectActivity_tActivity" FromRole="tActivity" ToRole="tSubjectActivity" />
+        </EntityType>
+        <EntityType Name="tDegree">
+          <Key>
+            <PropertyRef Name="DegreeID" />
+          </Key>
+          <Property Name="DegreeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DegreeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tTeachers" Relationship="DataModel.FK_tTeacher_tDegree" FromRole="tDegree" ToRole="tTeacher" />
+        </EntityType>
+        <EntityType Name="tFaculty">
+          <Key>
+            <PropertyRef Name="FacultyID" />
+          </Key>
+          <Property Name="FacultyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FacultyFullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FacultyName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tProfessions" Relationship="Self.FK_tProfession_tFaculty" FromRole="tFaculty" ToRole="tProfession" />
+          <NavigationProperty Name="tPulpits" Relationship="Self.FK_tPulpit_tFaculty" FromRole="tFaculty" ToRole="tPulpit" />
+        </EntityType>
+        <EntityType Name="tGrade">
+          <Key>
+            <PropertyRef Name="GradeID" />
+          </Key>
+          <Property Name="GradeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GradeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GradeNameRu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tGroups" Relationship="Self.FK_tGroup_tGrade" FromRole="tGrade" ToRole="tGroup" />
+          <NavigationProperty Name="tSemesters" Relationship="Self.FK_tSemester_tGrade" FromRole="tGrade" ToRole="tSemester" />
+        </EntityType>
+        <EntityType Name="tGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProfessionID" Type="Int32" />
+          <Property Name="GroupAmount" Type="Int32" />
+          <Property Name="GradeID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GroupPart" Type="Double" />
+          <NavigationProperty Name="tGrade" Relationship="Self.FK_tGroup_tGrade" FromRole="tGroup" ToRole="tGrade" />
+          <NavigationProperty Name="tProfession" Relationship="Self.FK_tGroup_tProfession" FromRole="tGroup" ToRole="tProfession" />
+          <NavigationProperty Name="tSubGroups" Relationship="Self.FK_tSubGroup_tGroup" FromRole="tGroup" ToRole="tSubGroup" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tDistribs" Relationship="DataModel.FK_tDistrib_tGroup" FromRole="tGroup" ToRole="tDistrib" />
+        </EntityType>
+        <EntityType Name="tLoginInfo">
+          <Key>
+            <PropertyRef Name="LoginID" />
+          </Key>
+          <Property Name="LoginID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserPassword" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tRole" Relationship="Self.FK_tLoginInfo_tRole" FromRole="tLoginInfo" ToRole="tRole" />
+        </EntityType>
+        <EntityType Name="tNorm">
+          <Key>
+            <PropertyRef Name="NormID" />
+          </Key>
+          <Property Name="NormID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NormName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tNormPositions" Relationship="DataModel.FK_tNormPosition_tNorm" FromRole="tNorm" ToRole="tNormPosition" />
+          <NavigationProperty Name="tTeachers" Relationship="DataModel.FK_tTeacher_tNorm" FromRole="tNorm" ToRole="tTeacher" />
+        </EntityType>
+        <EntityType Name="tPosition">
+          <Key>
+            <PropertyRef Name="PositionID" />
+          </Key>
+          <Property Name="PositionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PositionName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tNormPositions" Relationship="DataModel.FK_tNormPosition_tPosition" FromRole="tPosition" ToRole="tNormPosition" />
+          <NavigationProperty Name="tTeachers" Relationship="DataModel.FK_tTeacher_tPosition" FromRole="tPosition" ToRole="tTeacher" />
+        </EntityType>
+        <EntityType Name="tProfession">
+          <Key>
+            <PropertyRef Name="ProfessionID" />
+          </Key>
+          <Property Name="ProfessionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProfessionFullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProfessionName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ProfessionCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FacultyID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tFaculty" Relationship="Self.FK_tProfession_tFaculty" FromRole="tProfession" ToRole="tFaculty" />
+          <NavigationProperty Name="tGroups" Relationship="Self.FK_tGroup_tProfession" FromRole="tProfession" ToRole="tGroup" />
+          <NavigationProperty Name="tDistribs" Relationship="DataModel.FK_tDistrib_tProfession" FromRole="tProfession" ToRole="tDistrib" />
+          <NavigationProperty Name="tSubjectActivities" Relationship="DataModel.FK_tSubjectActivity_tProfession" FromRole="tProfession" ToRole="tSubjectActivity" />
+          <NavigationProperty Name="tSubjectProfessions" Relationship="DataModel.FK_tSubjectProfession_tProfession" FromRole="tProfession" ToRole="tSubjectProfession" />
+        </EntityType>
+        <EntityType Name="tPulpit">
+          <Key>
+            <PropertyRef Name="PulpitID" />
+          </Key>
+          <Property Name="PulpitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PulpitFullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PulpitName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FacultyID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tFaculty" Relationship="Self.FK_tPulpit_tFaculty" FromRole="tPulpit" ToRole="tFaculty" />
+          <NavigationProperty Name="tTeachers" Relationship="DataModel.FK_tTeacher_tPulpit" FromRole="tPulpit" ToRole="tTeacher" />
+          <NavigationProperty Name="tStreams" Relationship="DataModel.FK_tStream_tPulpit" FromRole="tPulpit" ToRole="tStream" />
+        </EntityType>
+        <EntityType Name="tRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleDesc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tLoginInfoes" Relationship="Self.FK_tLoginInfo_tRole" FromRole="tRole" ToRole="tLoginInfo" />
+        </EntityType>
+        <EntityType Name="tSemester">
+          <Key>
+            <PropertyRef Name="SemesterID" />
+          </Key>
+          <Property Name="SemesterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SemesterName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SemesterNameRu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GradeID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tGrade" Relationship="Self.FK_tSemester_tGrade" FromRole="tSemester" ToRole="tGrade" />
+          <NavigationProperty Name="tDistribs" Relationship="DataModel.FK_tDistrib_tSemester" FromRole="tSemester" ToRole="tDistrib" />
+          <NavigationProperty Name="tSubjectActivities" Relationship="DataModel.FK_tSubjectActivity_tSemester" FromRole="tSemester" ToRole="tSubjectActivity" />
+          <NavigationProperty Name="tStreams" Relationship="DataModel.FK_tStream_tSemester" FromRole="tSemester" ToRole="tStream" />
+        </EntityType>
+        <EntityType Name="tSubGroup">
+          <Key>
+            <PropertyRef Name="SubGroupID" />
+          </Key>
+          <Property Name="SubGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubGroupName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="SubGroupAmount" Type="Int32" />
+          <Property Name="SubGroupPart" Type="Double" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tGroup" Relationship="Self.FK_tSubGroup_tGroup" FromRole="tSubGroup" ToRole="tGroup" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tDistribs" Relationship="DataModel.FK_tDistrib_tSubGroup" FromRole="tSubGroup" ToRole="tDistrib" />
+        </EntityType>
+        <EntityType Name="tSubject">
+          <Key>
+            <PropertyRef Name="SubjectID" />
+          </Key>
+          <Property Name="SubjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubjectFullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubjectName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tDistribs" Relationship="DataModel.FK_tDistrib_tSubject" FromRole="tSubject" ToRole="tDistrib" />
+          <NavigationProperty Name="tSubjectActivities" Relationship="DataModel.FK_tSubjectActivity_tSubject" FromRole="tSubject" ToRole="tSubjectActivity" />
+          <NavigationProperty Name="tSubjectProfessions" Relationship="DataModel.FK_tSubjectProfession_tSubject" FromRole="tSubject" ToRole="tSubjectProfession" />
+          <NavigationProperty Name="tSubjectTeachers" Relationship="DataModel.FK_tSubjectTeacher_tSubject" FromRole="tSubject" ToRole="tSubjectTeacher" />
+        </EntityType>
+        <EntityType Name="tTitle">
+          <Key>
+            <PropertyRef Name="TitleID" />
+          </Key>
+          <Property Name="TitleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TitleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tTeachers" Relationship="DataModel.FK_tTeacher_tTitle" FromRole="tTitle" ToRole="tTeacher" />
+        </EntityType>
+        <Association Name="FK_tProfession_tFaculty">
+          <End Role="tFaculty" Type="Self.tFaculty" Multiplicity="0..1" />
+          <End Role="tProfession" Type="Self.tProfession" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tFaculty">
+              <PropertyRef Name="FacultyID" />
+            </Principal>
+            <Dependent Role="tProfession">
+              <PropertyRef Name="FacultyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tPulpit_tFaculty">
+          <End Role="tFaculty" Type="Self.tFaculty" Multiplicity="0..1" />
+          <End Role="tPulpit" Type="Self.tPulpit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tFaculty">
+              <PropertyRef Name="FacultyID" />
+            </Principal>
+            <Dependent Role="tPulpit">
+              <PropertyRef Name="FacultyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGroup_tGrade">
+          <End Role="tGrade" Type="Self.tGrade" Multiplicity="0..1" />
+          <End Role="tGroup" Type="Self.tGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGrade">
+              <PropertyRef Name="GradeID" />
+            </Principal>
+            <Dependent Role="tGroup">
+              <PropertyRef Name="GradeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSemester_tGrade">
+          <End Role="tGrade" Type="Self.tGrade" Multiplicity="0..1" />
+          <End Role="tSemester" Type="Self.tSemester" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGrade">
+              <PropertyRef Name="GradeID" />
+            </Principal>
+            <Dependent Role="tSemester">
+              <PropertyRef Name="GradeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGroup_tProfession">
+          <End Role="tProfession" Type="Self.tProfession" Multiplicity="0..1" />
+          <End Role="tGroup" Type="Self.tGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tGroup">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubGroup_tGroup">
+          <End Role="tGroup" Type="Self.tGroup" Multiplicity="0..1" />
+          <End Role="tSubGroup" Type="Self.tSubGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGroup">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="tSubGroup">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tLoginInfo_tRole">
+          <End Role="tRole" Type="Self.tRole" Multiplicity="0..1" />
+          <End Role="tLoginInfo" Type="Self.tLoginInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tRole">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="tLoginInfo">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tActivities" EntityType="Self.tActivity" />
+          <EntitySet Name="tDegrees" EntityType="Self.tDegree" />
+          <EntitySet Name="tFaculties" EntityType="Self.tFaculty" />
+          <EntitySet Name="tGrades" EntityType="Self.tGrade" />
+          <EntitySet Name="tGroups" EntityType="Self.tGroup" />
+          <EntitySet Name="tLoginInfoes" EntityType="Self.tLoginInfo" />
+          <EntitySet Name="tNorms" EntityType="Self.tNorm" />
+          <EntitySet Name="tPositions" EntityType="Self.tPosition" />
+          <EntitySet Name="tProfessions" EntityType="Self.tProfession" />
+          <EntitySet Name="tPulpits" EntityType="Self.tPulpit" />
+          <EntitySet Name="tRoles" EntityType="Self.tRole" />
+          <EntitySet Name="tSemesters" EntityType="Self.tSemester" />
+          <EntitySet Name="tSubGroups" EntityType="Self.tSubGroup" />
+          <EntitySet Name="tSubjects" EntityType="Self.tSubject" />
+          <EntitySet Name="tTitles" EntityType="Self.tTitle" />
+          <AssociationSet Name="FK_tProfession_tFaculty" Association="Self.FK_tProfession_tFaculty">
+            <End Role="tFaculty" EntitySet="tFaculties" />
+            <End Role="tProfession" EntitySet="tProfessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tPulpit_tFaculty" Association="Self.FK_tPulpit_tFaculty">
+            <End Role="tFaculty" EntitySet="tFaculties" />
+            <End Role="tPulpit" EntitySet="tPulpits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGroup_tGrade" Association="Self.FK_tGroup_tGrade">
+            <End Role="tGrade" EntitySet="tGrades" />
+            <End Role="tGroup" EntitySet="tGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSemester_tGrade" Association="Self.FK_tSemester_tGrade">
+            <End Role="tGrade" EntitySet="tGrades" />
+            <End Role="tSemester" EntitySet="tSemesters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGroup_tProfession" Association="Self.FK_tGroup_tProfession">
+            <End Role="tProfession" EntitySet="tProfessions" />
+            <End Role="tGroup" EntitySet="tGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubGroup_tGroup" Association="Self.FK_tSubGroup_tGroup">
+            <End Role="tGroup" EntitySet="tGroups" />
+            <End Role="tSubGroup" EntitySet="tSubGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tLoginInfo_tRole" Association="Self.FK_tLoginInfo_tRole">
+            <End Role="tRole" EntitySet="tRoles" />
+            <End Role="tLoginInfo" EntitySet="tLoginInfoes" />
+          </AssociationSet>
+          <FunctionImport Name="GetSubjectActivityList" ReturnType="Collection(DataModel.GetSubjectActivityList_Result)" />
+          <FunctionImport Name="GetSubjectList" ReturnType="Collection(DataModel.GetSubjectList_Result)" />
+          <FunctionImport Name="GetTeacherList" ReturnType="Collection(DataModel.GetTeacherList_Result)" />
+          <FunctionImport Name="spLoadSubjectFromWeb" />
+          <EntitySet Name="tSubjectPrevs" EntityType="DataModel.tSubjectPrev" />
+          <FunctionImport Name="spGetDistribListSubjectOnly" ReturnType="Collection(DataModel.spGetDistribListSubjectOnly_Result)" />
+          <FunctionImport Name="GetNormPositionList" ReturnType="Collection(DataModel.GetNormPositionList_Result)" />
+          <EntitySet Name="tDistribs" EntityType="DataModel.tDistrib" />
+          <AssociationSet Name="FK_tDistrib_tActivity" Association="DataModel.FK_tDistrib_tActivity">
+            <End Role="tActivity" EntitySet="tActivities" />
+            <End Role="tDistrib" EntitySet="tDistribs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tGroup" Association="DataModel.FK_tDistrib_tGroup">
+            <End Role="tGroup" EntitySet="tGroups" />
+            <End Role="tDistrib" EntitySet="tDistribs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tProfession" Association="DataModel.FK_tDistrib_tProfession">
+            <End Role="tProfession" EntitySet="tProfessions" />
+            <End Role="tDistrib" EntitySet="tDistribs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tSemester" Association="DataModel.FK_tDistrib_tSemester">
+            <End Role="tSemester" EntitySet="tSemesters" />
+            <End Role="tDistrib" EntitySet="tDistribs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tSubGroup" Association="DataModel.FK_tDistrib_tSubGroup">
+            <End Role="tSubGroup" EntitySet="tSubGroups" />
+            <End Role="tDistrib" EntitySet="tDistribs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tSubject" Association="DataModel.FK_tDistrib_tSubject">
+            <End Role="tSubject" EntitySet="tSubjects" />
+            <End Role="tDistrib" EntitySet="tDistribs" />
+          </AssociationSet>
+          <EntitySet Name="tNormPositions" EntityType="DataModel.tNormPosition" />
+          <AssociationSet Name="FK_tNormPosition_tNorm" Association="DataModel.FK_tNormPosition_tNorm">
+            <End Role="tNorm" EntitySet="tNorms" />
+            <End Role="tNormPosition" EntitySet="tNormPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNormPosition_tPosition" Association="DataModel.FK_tNormPosition_tPosition">
+            <End Role="tPosition" EntitySet="tPositions" />
+            <End Role="tNormPosition" EntitySet="tNormPositions" />
+          </AssociationSet>
+          <EntitySet Name="tSubjectActivities" EntityType="DataModel.tSubjectActivity" />
+          <AssociationSet Name="FK_tSubjectActivity_tActivity" Association="DataModel.FK_tSubjectActivity_tActivity">
+            <End Role="tActivity" EntitySet="tActivities" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectActivity_tProfession" Association="DataModel.FK_tSubjectActivity_tProfession">
+            <End Role="tProfession" EntitySet="tProfessions" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectActivity_tSemester" Association="DataModel.FK_tSubjectActivity_tSemester">
+            <End Role="tSemester" EntitySet="tSemesters" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectActivity_tSubject" Association="DataModel.FK_tSubjectActivity_tSubject">
+            <End Role="tSubject" EntitySet="tSubjects" />
+            <End Role="tSubjectActivity" EntitySet="tSubjectActivities" />
+          </AssociationSet>
+          <EntitySet Name="tTeachers" EntityType="DataModel.tTeacher" />
+          <AssociationSet Name="FK_tTeacher_tDegree" Association="DataModel.FK_tTeacher_tDegree">
+            <End Role="tDegree" EntitySet="tDegrees" />
+            <End Role="tTeacher" EntitySet="tTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDistrib_tTeacher" Association="DataModel.FK_tDistrib_tTeacher">
+            <End Role="tTeacher" EntitySet="tTeachers" />
+            <End Role="tDistrib" EntitySet="tDistribs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tNorm" Association="DataModel.FK_tTeacher_tNorm">
+            <End Role="tNorm" EntitySet="tNorms" />
+            <End Role="tTeacher" EntitySet="tTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tPosition" Association="DataModel.FK_tTeacher_tPosition">
+            <End Role="tPosition" EntitySet="tPositions" />
+            <End Role="tTeacher" EntitySet="tTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tPulpit" Association="DataModel.FK_tTeacher_tPulpit">
+            <End Role="tPulpit" EntitySet="tPulpits" />
+            <End Role="tTeacher" EntitySet="tTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTeacher_tTitle" Association="DataModel.FK_tTeacher_tTitle">
+            <End Role="tTitle" EntitySet="tTitles" />
+            <End Role="tTeacher" EntitySet="tTeachers" />
+          </AssociationSet>
+          <EntitySet Name="tSubjectProfessions" EntityType="DataModel.tSubjectProfession" />
+          <AssociationSet Name="FK_tSubjectProfession_tProfession" Association="DataModel.FK_tSubjectProfession_tProfession">
+            <End Role="tProfession" EntitySet="tProfessions" />
+            <End Role="tSubjectProfession" EntitySet="tSubjectProfessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectProfession_tSubject" Association="DataModel.FK_tSubjectProfession_tSubject">
+            <End Role="tSubject" EntitySet="tSubjects" />
+            <End Role="tSubjectProfession" EntitySet="tSubjectProfessions" />
+          </AssociationSet>
+          <FunctionImport Name="GetGroupSubGroupList" ReturnType="Collection(DataModel.GetGroupSubGroupList_Result)" />
+          <FunctionImport Name="GetStreamList" ReturnType="Collection(DataModel.GetStreamList_Result)" />
+          <FunctionImport Name="GetSubjectProfessionList" ReturnType="Collection(DataModel.GetSubjectProfessionList_Result)" />
+          <FunctionImport Name="GetTeacherSubjectList" ReturnType="Collection(DataModel.GetTeacherSubjectList_Result)" />
+          <EntitySet Name="tStreams" EntityType="DataModel.tStream" />
+          <AssociationSet Name="FK_tStream_tPulpit" Association="DataModel.FK_tStream_tPulpit">
+            <End Role="tPulpit" EntitySet="tPulpits" />
+            <End Role="tStream" EntitySet="tStreams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tStream_tSemester" Association="DataModel.FK_tStream_tSemester">
+            <End Role="tSemester" EntitySet="tSemesters" />
+            <End Role="tStream" EntitySet="tStreams" />
+          </AssociationSet>
+          <EntitySet Name="tSubjectTeachers" EntityType="DataModel.tSubjectTeacher" />
+          <AssociationSet Name="FK_tSubjectTeacher_tSubject" Association="DataModel.FK_tSubjectTeacher_tSubject">
+            <End Role="tSubject" EntitySet="tSubjects" />
+            <End Role="tSubjectTeacher" EntitySet="tSubjectTeachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tSubjectTeacher_tTeacher" Association="DataModel.FK_tSubjectTeacher_tTeacher">
+            <End Role="tTeacher" EntitySet="tTeachers" />
+            <End Role="tSubjectTeacher" EntitySet="tSubjectTeachers" />
+          </AssociationSet>
+          <FunctionImport Name="spLoadtSubject1" />
+          <FunctionImport Name="CreateHistory" ReturnType="Collection(String)" />
+        </EntityContainer>
+        <ComplexType Name="GetSubjectActivityList_Result">
+          <Property Type="Int32" Name="SubjectID" Nullable="false" />
+          <Property Type="Int32" Name="ActivityID" Nullable="false" />
+          <Property Type="Int32" Name="SemesterID" Nullable="true" />
+          <Property Type="Int32" Name="ProfessionID" Nullable="false" />
+          <Property Type="String" Name="SubjectFullName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ActivityNameRu" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SemesterNameRu" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ProfessionName" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="Hour" Nullable="true" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+          <Property Type="Int32" Name="SubjActID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetSubjectList_Result">
+          <Property Type="String" Name="DisciplineName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="specName" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ExamSem" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CreditSem" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="AudutoriumHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="LecturesHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="LabHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PracticHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SeminarHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="first_gr_first_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="first_gr_first_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="first_gr_second_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="first_gr_second_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="second_gr_third_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="second_gr_third_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="second_gr_fourth_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="second_gr_fourth_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="third_gr_fifth_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="third_gr_fifth_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="third_gr_sixth_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="third_gr_sixth_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="fourth_gr_seventh_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="fourth_gr_seventh_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="fourth_gr_eighth_sem_TotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="fourth_gr_eighth_sem_AudHour" Nullable="true" MaxLength="255" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetTeacherList_Result">
+          <Property Type="Int32" Name="TeacherID" Nullable="false" />
+          <Property Type="String" Name="TeacherFullName" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="PositionID" Nullable="true" />
+          <Property Type="String" Name="PositionName" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="TitleID" Nullable="false" />
+          <Property Type="String" Name="TitleName" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="DegreeID" Nullable="false" />
+          <Property Type="String" Name="DegreeName" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="NormID" Nullable="true" />
+          <Property Type="String" Name="NormName" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="Hour" Nullable="true" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="tSubjectPrev">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="specName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DisciplineName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ExamSem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreditSem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AudutoriumHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LecturesHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LabHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PracticHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SeminarHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="first_gr_first_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="first_gr_first_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="first_gr_second_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="first_gr_second_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="second_gr_third_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="second_gr_third_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="second_gr_fourth_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="second_gr_fourth_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="third_gr_fifth_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="third_gr_fifth_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="third_gr_sixth_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="third_gr_sixth_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="fourth_gr_seventh_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="fourth_gr_seventh_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="fourth_gr_eighth_sem_TotalHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="fourth_gr_eighth_sem_AudHour" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <ComplexType Name="spGetDistribListSubjectOnly_Result">
+          <Property Type="String" Name="SubjectFullName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ActivityNameRu" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ProfessionName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SubGroupName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SubGroupPart" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SubGroupAmount" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SemesterNameRu" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="GradeNameRu" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Hour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PractHourTotal" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="LabHourTotal" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ConsultTotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ExamTotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CreditTotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CourseworkTotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DiplomaTotalHour" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="GroupPart" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="GroupAmount" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="SubjectID" Nullable="true" />
+          <Property Type="Int32" Name="ActivityID" Nullable="true" />
+          <Property Type="Int32" Name="ProfessionId" Nullable="true" />
+          <Property Type="Int32" Name="SubGroupId" Nullable="true" />
+          <Property Type="Int32" Name="SemecterID" Nullable="true" />
+          <Property Type="Int32" Name="Grade" Nullable="true" />
+          <Property Type="Int32" Name="GroupID" Nullable="true" />
+          <Property Type="String" Name="GroupName" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="GetNormPositionList_Result">
+          <Property Type="String" Name="NormName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="PositionName" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="NormID" Nullable="true" />
+          <Property Type="Int32" Name="PositionID" Nullable="true" />
+          <Property Type="Int32" Name="Hour" Nullable="true" />
+          <Property Type="Int32" Name="NormPositionID" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="tDistrib">
+          <Key>
+            <PropertyRef Name="DistribID" />
+          </Key>
+          <Property Name="DistribID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherID" Type="Int32" Nullable="false" />
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="ProfessionID" Type="Int32" Nullable="false" />
+          <Property Name="SemesterID" Type="Int32" Nullable="false" />
+          <Property Name="ActivityID" Type="Int32" Nullable="false" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="SubGroupID" Type="Int32" />
+          <Property Name="Hour" Type="Single" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tActivity" Relationship="DataModel.FK_tDistrib_tActivity" FromRole="tDistrib" ToRole="tActivity" />
+          <NavigationProperty Name="tGroup" Relationship="DataModel.FK_tDistrib_tGroup" FromRole="tDistrib" ToRole="tGroup" />
+          <NavigationProperty Name="tProfession" Relationship="DataModel.FK_tDistrib_tProfession" FromRole="tDistrib" ToRole="tProfession" />
+          <NavigationProperty Name="tSemester" Relationship="DataModel.FK_tDistrib_tSemester" FromRole="tDistrib" ToRole="tSemester" />
+          <NavigationProperty Name="tSubGroup" Relationship="DataModel.FK_tDistrib_tSubGroup" FromRole="tDistrib" ToRole="tSubGroup" />
+          <NavigationProperty Name="tSubject" Relationship="DataModel.FK_tDistrib_tSubject" FromRole="tDistrib" ToRole="tSubject" />
+          <NavigationProperty Name="tTeacher" Relationship="DataModel.FK_tDistrib_tTeacher" FromRole="tDistrib" ToRole="tTeacher" />
+        </EntityType>
+        <Association Name="FK_tDistrib_tActivity">
+          <End Type="DataModel.tActivity" Role="tActivity" Multiplicity="1" />
+          <End Type="DataModel.tDistrib" Role="tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tActivity">
+              <PropertyRef Name="ActivityID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="ActivityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tGroup">
+          <End Type="DataModel.tGroup" Role="tGroup" Multiplicity="0..1" />
+          <End Type="DataModel.tDistrib" Role="tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGroup">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tProfession">
+          <End Type="DataModel.tProfession" Role="tProfession" Multiplicity="1" />
+          <End Type="DataModel.tDistrib" Role="tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tSemester">
+          <End Type="DataModel.tSemester" Role="tSemester" Multiplicity="1" />
+          <End Type="DataModel.tDistrib" Role="tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSemester">
+              <PropertyRef Name="SemesterID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="SemesterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tSubGroup">
+          <End Type="DataModel.tSubGroup" Role="tSubGroup" Multiplicity="0..1" />
+          <End Type="DataModel.tDistrib" Role="tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubGroup">
+              <PropertyRef Name="SubGroupID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="SubGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tSubject">
+          <End Type="DataModel.tSubject" Role="tSubject" Multiplicity="1" />
+          <End Type="DataModel.tDistrib" Role="tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tNormPosition">
+          <Key>
+            <PropertyRef Name="NormPositionID" />
+          </Key>
+          <Property Name="NormID" Type="Int32" Nullable="false" />
+          <Property Name="PositionID" Type="Int32" Nullable="false" />
+          <Property Name="Hour" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NormPositionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tNorm" Relationship="DataModel.FK_tNormPosition_tNorm" FromRole="tNormPosition" ToRole="tNorm" />
+          <NavigationProperty Name="tPosition" Relationship="DataModel.FK_tNormPosition_tPosition" FromRole="tNormPosition" ToRole="tPosition" />
+        </EntityType>
+        <Association Name="FK_tNormPosition_tNorm">
+          <End Type="DataModel.tNorm" Role="tNorm" Multiplicity="1" />
+          <End Type="DataModel.tNormPosition" Role="tNormPosition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNorm">
+              <PropertyRef Name="NormID" />
+            </Principal>
+            <Dependent Role="tNormPosition">
+              <PropertyRef Name="NormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNormPosition_tPosition">
+          <End Type="DataModel.tPosition" Role="tPosition" Multiplicity="1" />
+          <End Type="DataModel.tNormPosition" Role="tNormPosition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPosition">
+              <PropertyRef Name="PositionID" />
+            </Principal>
+            <Dependent Role="tNormPosition">
+              <PropertyRef Name="PositionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tSubjectActivity">
+          <Key>
+            <PropertyRef Name="SubjActID" />
+          </Key>
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="ActivityID" Type="Int32" Nullable="false" />
+          <Property Name="ProfessionID" Type="Int32" Nullable="false" />
+          <Property Name="Hour" Type="Int32" />
+          <Property Name="SemesterID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="SubjActID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tActivity" Relationship="DataModel.FK_tSubjectActivity_tActivity" FromRole="tSubjectActivity" ToRole="tActivity" />
+          <NavigationProperty Name="tProfession" Relationship="DataModel.FK_tSubjectActivity_tProfession" FromRole="tSubjectActivity" ToRole="tProfession" />
+          <NavigationProperty Name="tSemester" Relationship="DataModel.FK_tSubjectActivity_tSemester" FromRole="tSubjectActivity" ToRole="tSemester" />
+          <NavigationProperty Name="tSubject" Relationship="DataModel.FK_tSubjectActivity_tSubject" FromRole="tSubjectActivity" ToRole="tSubject" />
+        </EntityType>
+        <Association Name="FK_tSubjectActivity_tActivity">
+          <End Type="DataModel.tActivity" Role="tActivity" Multiplicity="1" />
+          <End Type="DataModel.tSubjectActivity" Role="tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tActivity">
+              <PropertyRef Name="ActivityID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="ActivityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectActivity_tProfession">
+          <End Type="DataModel.tProfession" Role="tProfession" Multiplicity="1" />
+          <End Type="DataModel.tSubjectActivity" Role="tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectActivity_tSemester">
+          <End Type="DataModel.tSemester" Role="tSemester" Multiplicity="0..1" />
+          <End Type="DataModel.tSubjectActivity" Role="tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSemester">
+              <PropertyRef Name="SemesterID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="SemesterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectActivity_tSubject">
+          <End Type="DataModel.tSubject" Role="tSubject" Multiplicity="1" />
+          <End Type="DataModel.tSubjectActivity" Role="tSubjectActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tSubjectActivity">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tTeacher">
+          <Key>
+            <PropertyRef Name="TeacherID" />
+          </Key>
+          <Property Name="TeacherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherFullName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PulpitID" Type="Int32" />
+          <Property Name="PositionID" Type="Int32" />
+          <Property Name="TitleID" Type="Int32" />
+          <Property Name="DegreeID" Type="Int32" />
+          <Property Name="NormID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tDegree" Relationship="DataModel.FK_tTeacher_tDegree" FromRole="tTeacher" ToRole="tDegree" />
+          <NavigationProperty Name="tDistribs" Relationship="DataModel.FK_tDistrib_tTeacher" FromRole="tTeacher" ToRole="tDistrib" />
+          <NavigationProperty Name="tNorm" Relationship="DataModel.FK_tTeacher_tNorm" FromRole="tTeacher" ToRole="tNorm" />
+          <NavigationProperty Name="tPosition" Relationship="DataModel.FK_tTeacher_tPosition" FromRole="tTeacher" ToRole="tPosition" />
+          <NavigationProperty Name="tPulpit" Relationship="DataModel.FK_tTeacher_tPulpit" FromRole="tTeacher" ToRole="tPulpit" />
+          <NavigationProperty Name="tTitle" Relationship="DataModel.FK_tTeacher_tTitle" FromRole="tTeacher" ToRole="tTitle" />
+          <NavigationProperty Name="tSubjectTeachers" Relationship="DataModel.FK_tSubjectTeacher_tTeacher" FromRole="tTeacher" ToRole="tSubjectTeacher" />
+        </EntityType>
+        <Association Name="FK_tTeacher_tDegree">
+          <End Type="DataModel.tDegree" Role="tDegree" Multiplicity="0..1" />
+          <End Type="DataModel.tTeacher" Role="tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDegree">
+              <PropertyRef Name="DegreeID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="DegreeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDistrib_tTeacher">
+          <End Type="DataModel.tTeacher" Role="tTeacher" Multiplicity="1" />
+          <End Type="DataModel.tDistrib" Role="tDistrib" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTeacher">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="tDistrib">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tNorm">
+          <End Type="DataModel.tNorm" Role="tNorm" Multiplicity="0..1" />
+          <End Type="DataModel.tTeacher" Role="tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNorm">
+              <PropertyRef Name="NormID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="NormID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tPosition">
+          <End Type="DataModel.tPosition" Role="tPosition" Multiplicity="0..1" />
+          <End Type="DataModel.tTeacher" Role="tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPosition">
+              <PropertyRef Name="PositionID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="PositionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tPulpit">
+          <End Type="DataModel.tPulpit" Role="tPulpit" Multiplicity="0..1" />
+          <End Type="DataModel.tTeacher" Role="tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPulpit">
+              <PropertyRef Name="PulpitID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="PulpitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTeacher_tTitle">
+          <End Type="DataModel.tTitle" Role="tTitle" Multiplicity="0..1" />
+          <End Type="DataModel.tTeacher" Role="tTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTitle">
+              <PropertyRef Name="TitleID" />
+            </Principal>
+            <Dependent Role="tTeacher">
+              <PropertyRef Name="TitleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tSubjectProfession">
+          <Key>
+            <PropertyRef Name="SubjectProfessionID" />
+          </Key>
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="ProfessionID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="SubjectProfessionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tProfession" Relationship="DataModel.FK_tSubjectProfession_tProfession" FromRole="tSubjectProfession" ToRole="tProfession" />
+          <NavigationProperty Name="tSubject" Relationship="DataModel.FK_tSubjectProfession_tSubject" FromRole="tSubjectProfession" ToRole="tSubject" />
+        </EntityType>
+        <Association Name="FK_tSubjectProfession_tProfession">
+          <End Type="DataModel.tProfession" Role="tProfession" Multiplicity="1" />
+          <End Type="DataModel.tSubjectProfession" Role="tSubjectProfession" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Principal>
+            <Dependent Role="tSubjectProfession">
+              <PropertyRef Name="ProfessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectProfession_tSubject">
+          <End Type="DataModel.tSubject" Role="tSubject" Multiplicity="1" />
+          <End Type="DataModel.tSubjectProfession" Role="tSubjectProfession" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tSubjectProfession">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetGroupSubGroupList_Result">
+          <Property Type="Int32" Name="GroupID" Nullable="false" />
+          <Property Type="Int32" Name="SubGroupID" Nullable="false" />
+          <Property Type="String" Name="GroupName" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="GroupAmount" Nullable="true" />
+          <Property Type="String" Name="SubGroupName" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="SubGroupAmount" Nullable="true" />
+          <Property Type="Boolean" Name="SubGroupIsDeleted" Nullable="false" />
+          <Property Type="Boolean" Name="GroupIsDeleted" Nullable="false" />
+          </ComplexType>
+        <ComplexType Name="GetStreamList_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="StreamID" Nullable="false" />
+          <Property Type="String" Name="ProfessionName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="StreamSubject" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="PulpitID" Nullable="true" />
+          <Property Type="Int32" Name="SemesterID" Nullable="true" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetSubjectProfessionList_Result">
+          <Property Type="Int32" Name="SubjectProfessionID" Nullable="false" />
+          <Property Type="Int32" Name="SubjectID" Nullable="false" />
+          <Property Type="Int32" Name="ProfessionID" Nullable="false" />
+          <Property Type="String" Name="SubjectFullName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ProfessionName" Nullable="true" MaxLength="10" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetTeacherSubjectList_Result">
+          <Property Type="Int32" Name="TeacherID" Nullable="false" />
+          <Property Type="Int32" Name="SubjectID" Nullable="false" />
+          <Property Type="Int32" Name="StreamID" Nullable="true" />
+          <Property Type="String" Name="TeacherFullName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="SubjectFullName" Nullable="false" MaxLength="255" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+          <Property Type="Int32" Name="SubjectTeacherID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="tStream">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="StreamID" Type="Int32" Nullable="false" />
+          <Property Name="StreamStructure" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="StreamSubject" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PulpitID" Type="Int32" />
+          <Property Name="SemesterID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tPulpit" Relationship="DataModel.FK_tStream_tPulpit" FromRole="tStream" ToRole="tPulpit" />
+          <NavigationProperty Name="tSemester" Relationship="DataModel.FK_tStream_tSemester" FromRole="tStream" ToRole="tSemester" />
+        </EntityType>
+        <Association Name="FK_tStream_tPulpit">
+          <End Type="DataModel.tPulpit" Role="tPulpit" Multiplicity="0..1" />
+          <End Type="DataModel.tStream" Role="tStream" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPulpit">
+              <PropertyRef Name="PulpitID" />
+            </Principal>
+            <Dependent Role="tStream">
+              <PropertyRef Name="PulpitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tStream_tSemester">
+          <End Type="DataModel.tSemester" Role="tSemester" Multiplicity="0..1" />
+          <End Type="DataModel.tStream" Role="tStream" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSemester">
+              <PropertyRef Name="SemesterID" />
+            </Principal>
+            <Dependent Role="tStream">
+              <PropertyRef Name="SemesterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tSubjectTeacher">
+          <Key>
+            <PropertyRef Name="SubjectTeacherID" />
+          </Key>
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="TeacherID" Type="Int32" Nullable="false" />
+          <Property Name="StreamID" Type="Int32" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedByID" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="SubjectTeacherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tSubject" Relationship="DataModel.FK_tSubjectTeacher_tSubject" FromRole="tSubjectTeacher" ToRole="tSubject" />
+          <NavigationProperty Name="tTeacher" Relationship="DataModel.FK_tSubjectTeacher_tTeacher" FromRole="tSubjectTeacher" ToRole="tTeacher" />
+        </EntityType>
+        <Association Name="FK_tSubjectTeacher_tSubject">
+          <End Type="DataModel.tSubject" Role="tSubject" Multiplicity="1" />
+          <End Type="DataModel.tSubjectTeacher" Role="tSubjectTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tSubject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="tSubjectTeacher">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tSubjectTeacher_tTeacher">
+          <End Type="DataModel.tTeacher" Role="tTeacher" Multiplicity="1" />
+          <End Type="DataModel.tSubjectTeacher" Role="tSubjectTeacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTeacher">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="tSubjectTeacher">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="dbContext">
+          <EntitySetMapping Name="tActivities">
+            <EntityTypeMapping TypeName="DataModel.tActivity">
+              <MappingFragment StoreEntitySet="tActivity">
+                <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="ActivityNameRu" ColumnName="ActivityNameRu" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tDegrees">
+            <EntityTypeMapping TypeName="DataModel.tDegree">
+              <MappingFragment StoreEntitySet="tDegree">
+                <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+                <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tFaculties">
+            <EntityTypeMapping TypeName="DataModel.tFaculty">
+              <MappingFragment StoreEntitySet="tFaculty">
+                <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+                <ScalarProperty Name="FacultyFullName" ColumnName="FacultyFullName" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="FacultyName" ColumnName="FacultyName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tGrades">
+            <EntityTypeMapping TypeName="DataModel.tGrade">
+              <MappingFragment StoreEntitySet="tGrade">
+                <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+                <ScalarProperty Name="GradeName" ColumnName="GradeName" />
+                <ScalarProperty Name="GradeNameRu" ColumnName="GradeNameRu" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tGroups">
+            <EntityTypeMapping TypeName="DataModel.tGroup">
+              <MappingFragment StoreEntitySet="tGroup">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+                <ScalarProperty Name="GroupAmount" ColumnName="GroupAmount" />
+                <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="GroupPart" ColumnName="GroupPart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tLoginInfoes">
+            <EntityTypeMapping TypeName="DataModel.tLoginInfo">
+              <MappingFragment StoreEntitySet="tLoginInfo">
+                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNorms">
+            <EntityTypeMapping TypeName="DataModel.tNorm">
+              <MappingFragment StoreEntitySet="tNorm">
+                <ScalarProperty Name="NormID" ColumnName="NormID" />
+                <ScalarProperty Name="NormName" ColumnName="NormName" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPositions">
+            <EntityTypeMapping TypeName="DataModel.tPosition">
+              <MappingFragment StoreEntitySet="tPosition">
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tProfessions">
+            <EntityTypeMapping TypeName="DataModel.tProfession">
+              <MappingFragment StoreEntitySet="tProfession">
+                <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+                <ScalarProperty Name="ProfessionFullName" ColumnName="ProfessionFullName" />
+                <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+                <ScalarProperty Name="ProfessionCode" ColumnName="ProfessionCode" />
+                <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPulpits">
+            <EntityTypeMapping TypeName="DataModel.tPulpit">
+              <MappingFragment StoreEntitySet="tPulpit">
+                <ScalarProperty Name="PulpitID" ColumnName="PulpitID" />
+                <ScalarProperty Name="PulpitFullName" ColumnName="PulpitFullName" />
+                <ScalarProperty Name="PulpitName" ColumnName="PulpitName" />
+                <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tRoles">
+            <EntityTypeMapping TypeName="DataModel.tRole">
+              <MappingFragment StoreEntitySet="tRole">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSemesters">
+            <EntityTypeMapping TypeName="DataModel.tSemester">
+              <MappingFragment StoreEntitySet="tSemester">
+                <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+                <ScalarProperty Name="SemesterName" ColumnName="SemesterName" />
+                <ScalarProperty Name="SemesterNameRu" ColumnName="SemesterNameRu" />
+                <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSubGroups">
+            <EntityTypeMapping TypeName="DataModel.tSubGroup">
+              <MappingFragment StoreEntitySet="tSubGroup">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="SubGroupID" ColumnName="SubGroupID" />
+                <ScalarProperty Name="SubGroupName" ColumnName="SubGroupName" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="SubGroupAmount" ColumnName="SubGroupAmount" />
+                <ScalarProperty Name="SubGroupPart" ColumnName="SubGroupPart" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSubjects">
+            <EntityTypeMapping TypeName="DataModel.tSubject">
+              <MappingFragment StoreEntitySet="tSubject">
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="SubjectFullName" ColumnName="SubjectFullName" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tTitles">
+            <EntityTypeMapping TypeName="DataModel.tTitle">
+              <MappingFragment StoreEntitySet="tTitle">
+                <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+                <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetSubjectActivityList" FunctionName="DataModel.Store.GetSubjectActivityList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetSubjectActivityList_Result">
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+                <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+                <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+                <ScalarProperty Name="SubjectFullName" ColumnName="SubjectFullName" />
+                <ScalarProperty Name="ActivityNameRu" ColumnName="ActivityNameRu" />
+                <ScalarProperty Name="SemesterNameRu" ColumnName="SemesterNameRu" />
+                <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="SubjActID" ColumnName="SubjActID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetSubjectList" FunctionName="DataModel.Store.GetSubjectList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetSubjectList_Result">
+                <ScalarProperty Name="DisciplineName" ColumnName="DisciplineName" />
+                <ScalarProperty Name="specName" ColumnName="specName" />
+                <ScalarProperty Name="ExamSem" ColumnName="ExamSem" />
+                <ScalarProperty Name="CreditSem" ColumnName="CreditSem" />
+                <ScalarProperty Name="TotalHour" ColumnName="TotalHour" />
+                <ScalarProperty Name="AudutoriumHour" ColumnName="AudutoriumHour" />
+                <ScalarProperty Name="LecturesHour" ColumnName="LecturesHour" />
+                <ScalarProperty Name="LabHour" ColumnName="LabHour" />
+                <ScalarProperty Name="PracticHour" ColumnName="PracticHour" />
+                <ScalarProperty Name="SeminarHour" ColumnName="SeminarHour" />
+                <ScalarProperty Name="first_gr_first_sem_TotalHour" ColumnName="first_gr_first_sem_TotalHour" />
+                <ScalarProperty Name="first_gr_first_sem_AudHour" ColumnName="first_gr_first_sem_AudHour" />
+                <ScalarProperty Name="first_gr_second_sem_TotalHour" ColumnName="first_gr_second_sem_TotalHour" />
+                <ScalarProperty Name="first_gr_second_sem_AudHour" ColumnName="first_gr_second_sem_AudHour" />
+                <ScalarProperty Name="second_gr_third_sem_TotalHour" ColumnName="second_gr_third_sem_TotalHour" />
+                <ScalarProperty Name="second_gr_third_sem_AudHour" ColumnName="second_gr_third_sem_AudHour" />
+                <ScalarProperty Name="second_gr_fourth_sem_TotalHour" ColumnName="second_gr_fourth_sem_TotalHour" />
+                <ScalarProperty Name="second_gr_fourth_sem_AudHour" ColumnName="second_gr_fourth_sem_AudHour" />
+                <ScalarProperty Name="third_gr_fifth_sem_TotalHour" ColumnName="third_gr_fifth_sem_TotalHour" />
+                <ScalarProperty Name="third_gr_fifth_sem_AudHour" ColumnName="third_gr_fifth_sem_AudHour" />
+                <ScalarProperty Name="third_gr_sixth_sem_TotalHour" ColumnName="third_gr_sixth_sem_TotalHour" />
+                <ScalarProperty Name="third_gr_sixth_sem_AudHour" ColumnName="third_gr_sixth_sem_AudHour" />
+                <ScalarProperty Name="fourth_gr_seventh_sem_TotalHour" ColumnName="fourth_gr_seventh_sem_TotalHour" />
+                <ScalarProperty Name="fourth_gr_seventh_sem_AudHour" ColumnName="fourth_gr_seventh_sem_AudHour" />
+                <ScalarProperty Name="fourth_gr_eighth_sem_TotalHour" ColumnName="fourth_gr_eighth_sem_TotalHour" />
+                <ScalarProperty Name="fourth_gr_eighth_sem_AudHour" ColumnName="fourth_gr_eighth_sem_AudHour" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTeacherList" FunctionName="DataModel.Store.GetTeacherList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetTeacherList_Result">
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="TeacherFullName" ColumnName="TeacherFullName" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+                <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+                <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+                <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+                <ScalarProperty Name="NormID" ColumnName="NormID" />
+                <ScalarProperty Name="NormName" ColumnName="NormName" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spLoadSubjectFromWeb" FunctionName="DataModel.Store.spLoadSubjectFromWeb" />
+          <EntitySetMapping Name="tSubjectPrevs">
+            <EntityTypeMapping TypeName="DataModel.tSubjectPrev">
+              <MappingFragment StoreEntitySet="tSubjectPrev">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="fourth_gr_eighth_sem_AudHour" ColumnName="fourth_gr_eighth_sem_AudHour" />
+                <ScalarProperty Name="fourth_gr_eighth_sem_TotalHour" ColumnName="fourth_gr_eighth_sem_TotalHour" />
+                <ScalarProperty Name="fourth_gr_seventh_sem_AudHour" ColumnName="fourth_gr_seventh_sem_AudHour" />
+                <ScalarProperty Name="fourth_gr_seventh_sem_TotalHour" ColumnName="fourth_gr_seventh_sem_TotalHour" />
+                <ScalarProperty Name="third_gr_sixth_sem_AudHour" ColumnName="third_gr_sixth_sem_AudHour" />
+                <ScalarProperty Name="third_gr_sixth_sem_TotalHour" ColumnName="third_gr_sixth_sem_TotalHour" />
+                <ScalarProperty Name="third_gr_fifth_sem_AudHour" ColumnName="third_gr_fifth_sem_AudHour" />
+                <ScalarProperty Name="third_gr_fifth_sem_TotalHour" ColumnName="third_gr_fifth_sem_TotalHour" />
+                <ScalarProperty Name="second_gr_fourth_sem_AudHour" ColumnName="second_gr_fourth_sem_AudHour" />
+                <ScalarProperty Name="second_gr_fourth_sem_TotalHour" ColumnName="second_gr_fourth_sem_TotalHour" />
+                <ScalarProperty Name="second_gr_third_sem_AudHour" ColumnName="second_gr_third_sem_AudHour" />
+                <ScalarProperty Name="second_gr_third_sem_TotalHour" ColumnName="second_gr_third_sem_TotalHour" />
+                <ScalarProperty Name="first_gr_second_sem_AudHour" ColumnName="first_gr_second_sem_AudHour" />
+                <ScalarProperty Name="first_gr_second_sem_TotalHour" ColumnName="first_gr_second_sem_TotalHour" />
+                <ScalarProperty Name="first_gr_first_sem_AudHour" ColumnName="first_gr_first_sem_AudHour" />
+                <ScalarProperty Name="first_gr_first_sem_TotalHour" ColumnName="first_gr_first_sem_TotalHour" />
+                <ScalarProperty Name="SeminarHour" ColumnName="SeminarHour" />
+                <ScalarProperty Name="PracticHour" ColumnName="PracticHour" />
+                <ScalarProperty Name="LabHour" ColumnName="LabHour" />
+                <ScalarProperty Name="LecturesHour" ColumnName="LecturesHour" />
+                <ScalarProperty Name="AudutoriumHour" ColumnName="AudutoriumHour" />
+                <ScalarProperty Name="TotalHour" ColumnName="TotalHour" />
+                <ScalarProperty Name="CreditSem" ColumnName="CreditSem" />
+                <ScalarProperty Name="ExamSem" ColumnName="ExamSem" />
+                <ScalarProperty Name="DisciplineName" ColumnName="DisciplineName" />
+                <ScalarProperty Name="specName" ColumnName="specName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spGetDistribListSubjectOnly" FunctionName="DataModel.Store.spGetDistribListSubjectOnly">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.spGetDistribListSubjectOnly_Result">
+                <ScalarProperty Name="SubjectFullName" ColumnName="SubjectFullName" />
+                <ScalarProperty Name="ActivityNameRu" ColumnName="ActivityNameRu" />
+                <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+                <ScalarProperty Name="SubGroupName" ColumnName="SubGroupName" />
+                <ScalarProperty Name="SubGroupPart" ColumnName="SubGroupPart" />
+                <ScalarProperty Name="SubGroupAmount" ColumnName="SubGroupAmount" />
+                <ScalarProperty Name="SemesterNameRu" ColumnName="SemesterNameRu" />
+                <ScalarProperty Name="GradeNameRu" ColumnName="GradeNameRu" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="PractHourTotal" ColumnName="PractHourTotal" />
+                <ScalarProperty Name="LabHourTotal" ColumnName="LabHourTotal" />
+                <ScalarProperty Name="ConsultTotalHour" ColumnName="ConsultTotalHour" />
+                <ScalarProperty Name="ExamTotalHour" ColumnName="ExamTotalHour" />
+                <ScalarProperty Name="CreditTotalHour" ColumnName="CreditTotalHour" />
+                <ScalarProperty Name="CourseworkTotalHour" ColumnName="CourseworkTotalHour" />
+                <ScalarProperty Name="DiplomaTotalHour" ColumnName="DiplomaTotalHour" />
+                <ScalarProperty Name="GroupPart" ColumnName="GroupPart" />
+                <ScalarProperty Name="GroupAmount" ColumnName="GroupAmount" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+                <ScalarProperty Name="ProfessionId" ColumnName="ProfessionId" />
+                <ScalarProperty Name="SubGroupId" ColumnName="SubGroupId" />
+                <ScalarProperty Name="SemecterID" ColumnName="SemecterID" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNormPositionList" FunctionName="DataModel.Store.GetNormPositionList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetNormPositionList_Result">
+                <ScalarProperty Name="NormName" ColumnName="NormName" />
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="NormID" ColumnName="NormID" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="NormPositionID" ColumnName="NormPositionID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tDistribs">
+            <EntityTypeMapping TypeName="DataModel.tDistrib">
+              <MappingFragment StoreEntitySet="tDistrib">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="SubGroupID" ColumnName="SubGroupID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+                <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+                <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="DistribID" ColumnName="DistribID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNormPositions">
+            <EntityTypeMapping TypeName="DataModel.tNormPosition">
+              <MappingFragment StoreEntitySet="tNormPosition">
+                <ScalarProperty Name="NormPositionID" ColumnName="NormPositionID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="NormID" ColumnName="NormID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSubjectActivities">
+            <EntityTypeMapping TypeName="DataModel.tSubjectActivity">
+              <MappingFragment StoreEntitySet="tSubjectActivity">
+                <ScalarProperty Name="SubjActID" ColumnName="SubjActID" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+                <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tTeachers">
+            <EntityTypeMapping TypeName="DataModel.tTeacher">
+              <MappingFragment StoreEntitySet="tTeacher">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="NormID" ColumnName="NormID" />
+                <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+                <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="PulpitID" ColumnName="PulpitID" />
+                <ScalarProperty Name="TeacherFullName" ColumnName="TeacherFullName" />
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSubjectProfessions">
+            <EntityTypeMapping TypeName="DataModel.tSubjectProfession">
+              <MappingFragment StoreEntitySet="tSubjectProfession">
+                <ScalarProperty Name="SubjectProfessionID" ColumnName="SubjectProfessionID" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetGroupSubGroupList" FunctionName="DataModel.Store.GetGroupSubGroupList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetGroupSubGroupList_Result">
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="SubGroupID" ColumnName="SubGroupID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupAmount" ColumnName="GroupAmount" />
+                <ScalarProperty Name="SubGroupName" ColumnName="SubGroupName" />
+                <ScalarProperty Name="SubGroupAmount" ColumnName="SubGroupAmount" />
+                <ScalarProperty Name="SubGroupIsDeleted" ColumnName="SubGroupIsDeleted" />
+                <ScalarProperty Name="GroupIsDeleted" ColumnName="GroupIsDeleted" />
+                </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetStreamList" FunctionName="DataModel.Store.GetStreamList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetStreamList_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+                <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+                <ScalarProperty Name="StreamSubject" ColumnName="StreamSubject" />
+                <ScalarProperty Name="PulpitID" ColumnName="PulpitID" />
+                <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetSubjectProfessionList" FunctionName="DataModel.Store.GetSubjectProfessionList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetSubjectProfessionList_Result">
+                <ScalarProperty Name="SubjectProfessionID" ColumnName="SubjectProfessionID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="ProfessionID" ColumnName="ProfessionID" />
+                <ScalarProperty Name="SubjectFullName" ColumnName="SubjectFullName" />
+                <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTeacherSubjectList" FunctionName="DataModel.Store.GetTeacherSubjectList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataModel.GetTeacherSubjectList_Result">
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+                <ScalarProperty Name="TeacherFullName" ColumnName="TeacherFullName" />
+                <ScalarProperty Name="SubjectFullName" ColumnName="SubjectFullName" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="SubjectTeacherID" ColumnName="SubjectTeacherID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tStreams">
+            <EntityTypeMapping TypeName="DataModel.tStream">
+              <MappingFragment StoreEntitySet="tStream">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="SemesterID" ColumnName="SemesterID" />
+                <ScalarProperty Name="PulpitID" ColumnName="PulpitID" />
+                <ScalarProperty Name="StreamSubject" ColumnName="StreamSubject" />
+                <ScalarProperty Name="StreamStructure" ColumnName="StreamStructure" />
+                <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tSubjectTeachers">
+            <EntityTypeMapping TypeName="DataModel.tSubjectTeacher">
+              <MappingFragment StoreEntitySet="tSubjectTeacher">
+                <ScalarProperty Name="SubjectTeacherID" ColumnName="SubjectTeacherID" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedByID" ColumnName="ModifiedByID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spLoadtSubject1" FunctionName="DataModel.Store.spLoadtSubject1" />
+          <FunctionImportMapping FunctionImportName="CreateHistory" FunctionName="DataModel.Store.CreateHistory" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

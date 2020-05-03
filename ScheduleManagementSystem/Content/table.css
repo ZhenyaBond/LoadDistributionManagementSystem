@@ -1,0 +1,39 @@
+﻿table-module {
+    display: block;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+table .head-cell {
+    border-bottom: 1px solid black;
+}
+
+table .head-cell:hover {
+    cursor: pointer;
+}
+
+tbody tr:nth-child(odd) {
+    background: #E3DCFC;
+}
+
+tbody tr:hover {
+    background: #ffffff;
+    opacity: 0.8;
+}
+
+.asc-sort-option::after {
+    content: "asc";
+    padding-left: 3px;
+}
+
+.desc-sort-option::after {
+    content: "desc";
+    padding-left: 3px;
+}
+
+.center-cell {
+    text-align: center;
+}

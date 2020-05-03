@@ -1,0 +1,15 @@
+﻿<div id="streams">
+    <header-module></header-module>
+
+    <div>
+        <div style="display: flex; justify-content: space-between; margin: 30px 0;">
+            <label style="margin-left: 30px; font-weight: bold;">Потоки</label>
+
+            <div class="component-entity-management">
+                <label style="margin-right: 30px;" data-bind="click: addStream">Добавить</label>
+            </div>
+        </div>
+
+        <table-module params="data: streams, containerName: 'streams-module', contextMenuHandler: menuHandler"></table-module>
+    </div>
+</div>

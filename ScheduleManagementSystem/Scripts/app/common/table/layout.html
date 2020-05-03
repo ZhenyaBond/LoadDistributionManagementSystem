@@ -1,0 +1,23 @@
+﻿<div id="table">
+    <table>
+        <thead>
+            <tr data-bind="foreach: columnNames">
+                <th class="head-cell" 
+                    data-bind="
+                    text: $data, 
+                    click: $parent.sort, 
+                    hidden: $parent.isHidden(null, $data), 
+                    event: {mouseover: $parent.showSort, mouseout: $parent.hideSort }"></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: data">
+            <tr data-bind="foreach: $parent.columnNames">
+                <td 
+                    data-bind="
+                    text: $parents[1].getPropValue($parent, $data), 
+                    hidden: $parents[1].isHidden($parent, $data),
+                    class: $parents[1].getClass($parent, $data)"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

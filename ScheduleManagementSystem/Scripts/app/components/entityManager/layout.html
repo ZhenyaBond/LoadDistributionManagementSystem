@@ -1,0 +1,27 @@
+﻿<div>
+    <div data-bind="text: title"></div>
+
+    <div data-bind="foreach: properties">
+        <div style="display: flex; justify-content: space-between" data-bind="hidden: $parent.isHidden($data)">
+            <div>
+                <label data-bind="text: $data"></label>
+            </div>
+            <div>
+                <!-- ko if: $parent.isTextProperty($data) -->
+                <input data-bind="textInput: $parent.getPropValue($data), enable: $parent.isEditable($data)"/>
+                <!-- /ko -->
+                <!-- ko ifnot: $parent.isTextProperty($data) -->
+                <select
+                    data-bind="
+                            options: $parent.getDefaults($data), 
+                            optionsText: 'Name', 
+                            optionsValue: 'Name',
+                            optionsCaption: 'Choose...',
+                            value: $parent.getPropValue($data),
+                            enable: $parent.isEditable($data)">
+                </select>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>

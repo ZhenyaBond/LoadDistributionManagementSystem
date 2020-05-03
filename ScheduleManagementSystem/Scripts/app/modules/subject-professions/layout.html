@@ -1,0 +1,15 @@
+﻿<div id="subjectprofessions">
+    <header-module></header-module>
+
+    <div>
+        <div style="display: flex; justify-content: space-between; margin: 30px 0;">
+            <label style="margin-left: 30px; font-weight: bold;">Специальности</label>
+
+            <div class="component-entity-management">
+                <label style="margin-right: 30px;" data-bind="click: addSubjectProfession">Добавить</label>
+            </div>
+        </div>
+
+        <table-module params="data: subjectprofessions, containerName: 'subject-professions-module', contextMenuHandler: menuHandler"></table-module>
+    </div>
+</div>

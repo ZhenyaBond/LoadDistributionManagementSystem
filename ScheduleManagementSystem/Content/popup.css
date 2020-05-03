@@ -1,0 +1,37 @@
+﻿entity-manager {
+    display: block;
+    padding: 20px;
+}
+
+.popup-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.50;
+}
+
+.popup-container {
+    position: absolute;
+    background: white;
+}
+
+.popup-btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-cancel-btn {
+    color: red;
+}
+
+.popup-ok-btn {
+    color: green;
+}
+
+.popup-cancel-btn:hover,
+.popup-ok-btn:hover {
+    cursor: pointer;
+}

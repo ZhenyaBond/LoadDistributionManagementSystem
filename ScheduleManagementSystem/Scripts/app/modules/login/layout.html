@@ -1,0 +1,12 @@
+﻿<div style="display: flex; flex-direction: column; align-items: center;">
+    <div class="header">
+        Система составления плана нагрузки
+    </div>
+
+    <div class="login-module" data-bind="with: loginViewModel">
+        <label>Имя пользователя: <input data-bind="textInput: username"/></label>
+        <label>Пароль: <input type="password" data-bind="textInput: password"/></label>
+
+        <label class="login-btn" data-bind="click: onLoginClick">Войти</label>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+﻿header {
+    background: #8469F2;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header-module {
+    display: block;
+}
+
+.navigation, .navigation .main {
+    display: flex;
+}
+
+.navigation .main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+    margin: 10px;
+}
+
+.dropbtn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown {
+    position: relative;
+    color: white;
+    margin-left: 10px;
+
+    width: 200px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background: #8469F2
+}
+
+.dropdown-content link-module {
+    justify-content: center;
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-context a:visited {
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile .variables {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user-profile input {
+    width: 40px;
+}
+
+.user-profile label {
+    color: white;
+
+    margin: 0 10px;
+}
+
+.user-profile label:not(#actualValue):hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

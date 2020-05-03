@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ScheduleManagementSystem.BundleConfig" Collapsed="true">
+    <Position X="33.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.FilterConfig" Collapsed="true">
+    <Position X="40.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\FilterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.RouteConfig" Collapsed="true">
+    <Position X="40.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.WebApiConfig" Collapsed="true">
+    <Position X="40.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\WebApiConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Startup" Collapsed="true">
+    <Position X="43.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgIAAAAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ApiDescriptionExtensions" Collapsed="true">
+    <Position X="29.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ApiDescriptionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.HelpPageConfig" Collapsed="true">
+    <Position X="43.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\App_Start\HelpPageConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.HelpPageAreaRegistration" Collapsed="true">
+    <Position X="42" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\HelpPageAreaRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.HelpPageConfigurationExtensions" Collapsed="true">
+    <Position X="29.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAABAICACACEAACGSCAAAADABAAAEMAAAAAIEA=</HashCode>
+      <FileName>Areas\HelpPage\HelpPageConfigurationExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.HelpPageSampleGenerator" Collapsed="true">
+    <Position X="31.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAYAARQAQAAEAJgAAAQAAgAAEAgFAAAAABCAAAI=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.HelpPageSampleKey" Collapsed="true">
+    <Position X="33.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAgAgAAAAAAAAAAAAICQAAAEAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ImageSample" Collapsed="true">
+    <Position X="35" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAIAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\ImageSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.InvalidSample" Collapsed="true">
+    <Position X="36.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\InvalidSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ObjectGenerator" Collapsed="true">
+    <Position X="35" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABDAoAAAAAACAEAICAAAYAAACAAAAAAgCAgAAAAIA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\ObjectGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.TextSample" Collapsed="true">
+    <Position X="31.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAACAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\SampleGeneration\TextSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.XmlDocumentationProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIEAAAAIBAEAQAAABIAAAAAAAAAAAAAAAAAAAAAAAkg=</HashCode>
+      <FileName>Areas\HelpPage\XmlDocumentationProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.Controllers.HelpController" Collapsed="true">
+    <Position X="17.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAABAAAAAAAAAAAAAAAAAAAAAAAgAEAAAAgAAA=</HashCode>
+      <FileName>Areas\HelpPage\Controllers\HelpController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ModelDescriptions.EnumValueDescription" Collapsed="true">
+    <Position X="38.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator" Collapsed="true">
+    <Position X="42" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGQBAAJAABAAACBAgAAAAASBAAAAAAAAAEAACAQAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ModelDescriptions.ModelNameAttribute" Collapsed="true">
+    <Position X="43.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ModelDescriptions.ModelNameHelper" Collapsed="true">
+    <Position X="29.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ModelDescriptions.ParameterAnnotation" Collapsed="true">
+    <Position X="36.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.ModelDescriptions.ParameterDescription" Collapsed="true">
+    <Position X="38.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAQAQAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\HelpPage\ModelDescriptions\ParameterDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Areas.HelpPage.Models.HelpPageApiModel" Collapsed="true">
+    <Position X="40.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAGBAAAAAAAAAAAAAgAAAAAAAUBAAAAAQAQAg=</HashCode>
+      <FileName>Areas\HelpPage\Models\HelpPageApiModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.ActivitiesController" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ActivitiesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.HomeController" Collapsed="true">
+    <Position X="15" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.LecturersController" Collapsed="true">
+    <Position X="3" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\LecturersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.LoadController">
+    <Position X="21.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABABAAAAAAAAAAAEAAEAAAAAAAAEAAAA=</HashCode>
+      <FileName>Controllers\LoadController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.NormasController" Collapsed="true">
+    <Position X="5.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\NormasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.NormPositionsController">
+    <Position X="3" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Controllers\NormPositionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.ServerController">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAEAQAA=</HashCode>
+      <FileName>Controllers\ServerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.StreamController" Collapsed="true">
+    <Position X="7.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\StreamController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.StreamsController">
+    <Position X="8.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAhAAAAAAAAACAEAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Controllers\StreamsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.SubjectActivitiesController">
+    <Position X="10.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABQAAAAAAAACAEAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Controllers\SubjectActivitiesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.SubjectProfessionController" Collapsed="true">
+    <Position X="19.5" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\SubjectProfessionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.SubjectProffesionsController">
+    <Position X="24" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAABAAAAAACAEAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Controllers\SubjectProffesionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.SubjectsController">
+    <Position X="5.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQQCAAAAAAAAAABAAAAAAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SubjectsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.SubjectTeacherController" Collapsed="true">
+    <Position X="12.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\SubjectTeacherController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.SubjectTeachersController">
+    <Position X="13.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAABAAEAAAAA=</HashCode>
+      <FileName>Controllers\SubjectTeachersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.TeachersController">
+    <Position X="16.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAACAEACAAIAABAAAABAAA=</HashCode>
+      <FileName>Controllers\TeachersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.ThingsController" Collapsed="true">
+    <Position X="10" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ThingsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.UsersController">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\UsersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Controllers.WorkLoadController" Collapsed="true">
+    <Position X="22.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\WorkLoadController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Infrastructure.AppOauthProvider" Collapsed="true">
+    <Position X="31.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAACAAAAAAAAAAAAAEAAAIACAAAAAAAAAgA=</HashCode>
+      <FileName>Infrastructure\AppOauthProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Infrastructure.NinjectConfig" Collapsed="true">
+    <Position X="31.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\NinjectConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Infrastructure.WebApiDependencyResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="42" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAACAAAEAAAAAAAAAAAAAAIAAAAAEA=</HashCode>
+      <FileName>Infrastructure\WebApiDependencyResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.LoadDto" Collapsed="true">
+    <Position X="38.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAIIAACAAAAAAABAIAAAAgAEAAAEA=</HashCode>
+      <FileName>Models\LoadDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.LoadUpdateDto" Collapsed="true">
+    <Position X="40.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LoadUpdateDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.NormPositionDto" Collapsed="true">
+    <Position X="33.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\NormPositionDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.StreamDto" Collapsed="true">
+    <Position X="31.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAAAAAAAAABAAAAAAAgAAAAAAAAAAAAQQAAAA=</HashCode>
+      <FileName>Models\StreamDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.SubjectActivityDto" Collapsed="true">
+    <Position X="33.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAUAAAAAAAAAAAAAAAgAAAAAIAAAAAAAABAAA=</HashCode>
+      <FileName>Models\SubjectActivityDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.SubjectDto" Collapsed="true">
+    <Position X="35" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARCAAQAAAAAAIAAQAAAEAAAAAAAAQQAAAAAAQAAACA=</HashCode>
+      <FileName>Models\SubjectDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.SubjectProfessionDto" Collapsed="true">
+    <Position X="36.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQABAAA=</HashCode>
+      <FileName>Models\SubjectProfessionDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.SubjectTeacherDto" Collapsed="true">
+    <Position X="38.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAACAABAAAAAAAAAAAAAQQAAAA=</HashCode>
+      <FileName>Models\SubjectTeacherDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.TeacherDto" Collapsed="true">
+    <Position X="29.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAIAEAgAACAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TeacherDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.UserCreateDto" Collapsed="true">
+    <Position X="36.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Models\UserCreateDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.VariableDto" Collapsed="true">
+    <Position X="38.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\VariableDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduleManagementSystem.Models.WorkloadDto" Collapsed="true">
+    <Position X="43.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEAAAAEAAAAAACAIAAAAAAIIAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\WorkloadDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Web.Mvc.Controller" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Orientation="Left" Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="System.Web.Http.ApiController" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.DalModule" Collapsed="true">
+    <Position X="35" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.dbContext" Collapsed="true">
+    <Position X="36.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetGroupSubGroupList_Result" Collapsed="true">
+    <Position X="42" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetNormPositionList_Result" Collapsed="true">
+    <Position X="43.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetStreamList_Result" Collapsed="true">
+    <Position X="29.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetSubjectActivityList_Result" Collapsed="true">
+    <Position X="31.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetSubjectList_Result" Collapsed="true">
+    <Position X="33.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetSubjectProfessionList_Result" Collapsed="true">
+    <Position X="35" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetTeacherList_Result" Collapsed="true">
+    <Position X="36.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.GetTeacherSubjectList_Result" Collapsed="true">
+    <Position X="38.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.spGetDistribListSubjectOnly_Result" Collapsed="true">
+    <Position X="42" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tActivity" Collapsed="true">
+    <Position X="40.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tDegree" Collapsed="true">
+    <Position X="42" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tDistrib" Collapsed="true">
+    <Position X="43.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tFaculty" Collapsed="true">
+    <Position X="33.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tGrade" Collapsed="true">
+    <Position X="35" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tGroup" Collapsed="true">
+    <Position X="36.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tLoginInfo" Collapsed="true">
+    <Position X="38.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tNorm" Collapsed="true">
+    <Position X="40.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tNormPosition" Collapsed="true">
+    <Position X="42" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tPosition" Collapsed="true">
+    <Position X="43.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tProfession" Collapsed="true">
+    <Position X="29.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tPulpit" Collapsed="true">
+    <Position X="31.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tRole" Collapsed="true">
+    <Position X="33.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tSemester" Collapsed="true">
+    <Position X="35" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tStream" Collapsed="true">
+    <Position X="36.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tSubGroup" Collapsed="true">
+    <Position X="38.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tSubject" Collapsed="true">
+    <Position X="40.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tSubjectActivity" Collapsed="true">
+    <Position X="42" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tSubjectPrev" Collapsed="true">
+    <Position X="43.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tSubjectProfession" Collapsed="true">
+    <Position X="29.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tSubjectTeacher" Collapsed="true">
+    <Position X="31.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tTeacher" Collapsed="true">
+    <Position X="33.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.tTitle" Collapsed="true">
+    <Position X="35" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Models.StaticDefaultItem" Collapsed="true">
+    <Position X="29.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.LoadRepository" Collapsed="true">
+    <Position X="15" Y="9.75" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.NormPositionsRepository" Collapsed="true">
+    <Position X="20" Y="9.75" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.RepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="11.75" Y="8.5" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.StreamsRepository">
+    <Position X="0.5" Y="9.75" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.SubjectActivitiesRepository" Collapsed="true">
+    <Position X="3.25" Y="9.75" Width="2.25" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.SubjectProfessionsRepository" Collapsed="true">
+    <Position X="6.25" Y="9.75" Width="2.25" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.SubjectsRepository" Collapsed="true">
+    <Position X="9.25" Y="9.75" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.SubjectTeachersRepository" Collapsed="true">
+    <Position X="12" Y="9.75" Width="2.25" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.TeachersRepository" Collapsed="true">
+    <Position X="17.5" Y="9.75" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScheduleManagementSystem.DAL.Repositories.UsersRepository" Collapsed="true">
+    <Position X="22.75" Y="9.75" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.ILoadRepository" Collapsed="true">
+    <Position X="14" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.INormPositionsRepository" Collapsed="true">
+    <Position X="18.75" Y="12.75" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="16.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.IStreamsRepository" Collapsed="true">
+    <Position X="24" Y="12.75" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.ISubjectActivitiesRepository" Collapsed="true">
+    <Position X="26.5" Y="12.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.ISubjectProfessionsRepository" Collapsed="true">
+    <Position X="5.5" Y="12.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.ISubjectsRepository" Collapsed="true">
+    <Position X="8.5" Y="12.75" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.ISubjectTeachersRepository" Collapsed="true">
+    <Position X="11" Y="12.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.ITeachersRepository" Collapsed="true">
+    <Position X="16.25" Y="12.75" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ScheduleManagementSystem.DAL.Repositories.Interfaces.IUsersRepository" Collapsed="true">
+    <Position X="21.5" Y="12.75" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

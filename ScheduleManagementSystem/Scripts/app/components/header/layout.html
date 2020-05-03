@@ -1,0 +1,39 @@
+﻿<header>
+    <div class="navigation">
+        <div class="main">
+            <link-module params="text: 'Главная', href: '/'"></link-module>
+            <link-module params="text: 'Преподаватели', href: '/teachers'"></link-module>
+            <link-module params="text: 'Дисциплины', href: '/disciplines'"></link-module>
+            <a target="_blank" data-bind="attr: {href: url}">Отчет</a>
+        </div>
+        
+        <div class="dropdown">
+            <div class="dropbtn">Меню</div>
+            <div class="dropdown-content">
+                <link-module params="text: 'Нормы', href: '/normas'"></link-module>
+                <link-module params="text: 'Потоки', href: '/streams'"></link-module>
+                <link-module params="text: 'Группы', href: '/groups'"></link-module>
+                <link-module params="text: 'Дисциплины-Препод.', href: '/subjects-teachers'"></link-module>
+                <link-module params="text: 'Дисциплины-Активн.', href: '/subjects-activities'"></link-module>
+                <link-module params="text: 'Дисциплины-Спец.', href: '/subjects-professions'"></link-module>
+            </div>
+        </div>
+    </div>
+
+    <div class="user-profile">
+        <div class="variables">
+            <div style="display: flex; flex-direction: column; text-align: center; margin: 0 10px;">
+                <label id="plannedValue" data-bind="text: plannedValue"></label>
+                <span style="color: white; opacity: 0.8;">Плановая</span>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; text-align: center; margin: 0 10px;">
+                <label id="actualValue" data-bind="text: actualValue"></label>
+                <span style="color: white; opacity: 0.8;">Фактическая</span>
+            </div>
+
+            <label data-bind="click: reloadCurrentValue">Обновить</label>
+        </div>
+        <label data-bind="click: logout">Выйти</label>
+    </div>
+</header>

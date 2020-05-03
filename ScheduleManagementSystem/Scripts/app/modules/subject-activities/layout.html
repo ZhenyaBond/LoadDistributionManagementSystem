@@ -1,0 +1,13 @@
+﻿<div id="subjectactivity">
+    <header-module></header-module>
+
+    <div>
+        <div style="display: flex; justify-content: space-between; margin: 30px 0;">
+            <label style="margin-left: 30px; font-weight: bold;">Активности</label>
+
+            <label style="margin-right: 30px;" data-bind="click: addSubjectActivity">Добавить</label>
+        </div>
+
+        <table-module params="data: subjectactivities, containerName: 'subject-activity-module', contextMenuHandler: menuHandler"></table-module>
+    </div>
+</div>

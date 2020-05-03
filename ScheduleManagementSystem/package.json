@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "knockout": "^3.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "raw-loader": "^2.0.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "name": "ScheduleManagementSystem",
+  "scripts": {
+    "build-components": "webpack"
+  },
+  "private": true,
+  "version": "1.0.0"
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b3a175da2e24282838ee4d96060b6cf" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="DataModel.tActivity" Width="1.5" PointX="10.875" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tDegree" Width="1.5" PointX="22.625" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tFaculty" Width="1.5" PointX="12.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tGrade" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tGroup" Width="1.5" PointX="5.875" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tLoginInfo" Width="1.5" PointX="15.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tNorm" Width="1.5" PointX="22.625" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tPosition" Width="1.5" PointX="22.625" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tProfession" Width="1.5" PointX="10" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tPulpit" Width="1.5" PointX="15.875" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tRole" Width="1.5" PointX="13.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tSemester" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tSubGroup" Width="1.5" PointX="5.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tSubject" Width="1.5" PointX="13.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.tTitle" Width="1.5" PointX="19.125" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="DataModel.FK_tProfession_tFaculty" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_tPulpit_tFaculty" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_tGroup_tGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_tSemester_tGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_tGroup_tProfession" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_tSubGroup_tGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_tLoginInfo_tRole" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DataModel.tDistrib" Width="1.5" PointX="15.25" PointY="4.125" />
+        <AssociationConnector Association="DataModel.FK_tDistrib_tActivity" />
+        <AssociationConnector Association="DataModel.FK_tDistrib_tGroup" />
+        <AssociationConnector Association="DataModel.FK_tDistrib_tProfession" />
+        <AssociationConnector Association="DataModel.FK_tDistrib_tSemester" />
+        <AssociationConnector Association="DataModel.FK_tDistrib_tSubGroup" />
+        <AssociationConnector Association="DataModel.FK_tDistrib_tSubject" />
+        <EntityTypeShape EntityType="DataModel.tNormPosition" Width="1.5" PointX="22.625" PointY="10.375" />
+        <AssociationConnector Association="DataModel.FK_tNormPosition_tNorm" />
+        <AssociationConnector Association="DataModel.FK_tNormPosition_tPosition" />
+        <EntityTypeShape EntityType="DataModel.tSubjectActivity" Width="1.5" PointX="2.5" PointY="6.5" />
+        <AssociationConnector Association="DataModel.FK_tSubjectActivity_tActivity" />
+        <AssociationConnector Association="DataModel.FK_tSubjectActivity_tProfession" />
+        <AssociationConnector Association="DataModel.FK_tSubjectActivity_tSemester" />
+        <AssociationConnector Association="DataModel.FK_tSubjectActivity_tSubject" />
+        <EntityTypeShape EntityType="DataModel.tTeacher" Width="1.5" PointX="24.875" PointY="7.625" />
+        <AssociationConnector Association="DataModel.FK_tTeacher_tDegree" />
+        <AssociationConnector Association="DataModel.FK_tDistrib_tTeacher" />
+        <AssociationConnector Association="DataModel.FK_tTeacher_tNorm" />
+        <AssociationConnector Association="DataModel.FK_tTeacher_tPosition" />
+        <AssociationConnector Association="DataModel.FK_tTeacher_tPulpit" />
+        <AssociationConnector Association="DataModel.FK_tTeacher_tTitle" />
+        <EntityTypeShape EntityType="DataModel.tSubjectProfession" Width="1.5" PointX="17.5" PointY="5" />
+        <AssociationConnector Association="DataModel.FK_tSubjectProfession_tProfession" />
+        <AssociationConnector Association="DataModel.FK_tSubjectProfession_tSubject" />
+        <EntityTypeShape EntityType="DataModel.tStream" Width="1.5" PointX="20.125" PointY="6" />
+        <AssociationConnector Association="DataModel.FK_tStream_tPulpit" />
+        <AssociationConnector Association="DataModel.FK_tStream_tSemester" />
+        <EntityTypeShape EntityType="DataModel.tSubjectTeacher" Width="1.5" PointX="27.125" PointY="8.875" />
+        <AssociationConnector Association="DataModel.FK_tSubjectTeacher_tSubject" />
+        <AssociationConnector Association="DataModel.FK_tSubjectTeacher_tTeacher" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

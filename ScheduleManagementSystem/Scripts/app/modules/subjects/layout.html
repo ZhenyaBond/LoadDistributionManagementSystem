@@ -1,0 +1,17 @@
+﻿<div id="subjects">
+    <header-module></header-module>
+    
+    <div>
+        <div style="display: flex; justify-content: space-between; margin: 30px 0;">
+            <label style="margin-left: 30px; font-weight: bold;">Дисциплины</label>
+            
+            <div class="component-entity-management">
+                <label style="margin-right: 30px;" data-bind="click: addSubject">Добавить</label>
+
+                <label style="margin-right: 30px;" data-bind="click: loadFromWeb">Загрузить дисциплины</label>
+            </div>
+        </div>
+
+        <table-module params="data: subjects, containerName: 'subjects-module', contextMenuHandler: menuHandler"></table-module>
+    </div>
+</div>

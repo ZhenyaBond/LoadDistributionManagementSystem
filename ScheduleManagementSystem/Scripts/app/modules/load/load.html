@@ -1,0 +1,79 @@
+﻿<div id="workload">
+    <header-module params="isWorkloadPage: true, teacherId: teacherId"></header-module>
+
+    <div>
+        <div style="margin: 40px 20px 0;">
+            Преподаватель: <label data-bind="text: teacherName"></label>
+        </div>
+        
+        <div id="assignWorkload" style="display: flex; justify-content: space-around; margin: 60px 0;">
+            <select data-bind="
+                options: subjects,
+                optionsText: 'Name',
+                optionsValue: 'Id',
+                optionsCaption: 'Дисциплины...',
+                value: selectedSubjectId"
+                    style="max-width: 400px"
+                    class="load-input">
+            </select>
+
+            <select data-bind="
+                options: semesters,
+                optionsText: 'Name',
+                optionsValue: 'Id',
+                optionsCaption: 'Семестр...',
+                value: selectedSemesterId"
+                    class="load-input">
+            </select>
+
+            <select data-bind="
+                options: specs,
+                optionsText: 'Name',
+                optionsValue: 'Id',
+                optionsCaption: 'Специальность...',
+                value: selectedSpecId"
+                    class="load-input">
+            </select>
+
+            <select data-bind="
+                options: activities,
+                optionsText: 'Name',
+                optionsValue: 'Id',
+                optionsCaption: 'Активность...',
+                value: selectedActivityId"
+                    class="load-input">
+            </select>
+
+            <select data-bind="
+                options: groups,
+                optionsText: 'Name',
+                optionsValue: 'Id',
+                optionsCaption: 'Группы...',
+                value: selectedGroupId"
+                    class="load-input">
+            </select>
+
+            <select data-bind="
+                options: subGroups,
+                optionsText: 'Name',
+                optionsValue: 'Id',
+                optionsCaption: 'Подгруппы...',
+                value: selectedSubGroupId"
+                    class="load-input">
+            </select>
+
+            <select data-bind="
+                options: hours,
+                optionsCaption: 'Часы...',
+                value: selectedHour"
+                    class="load-input">
+            </select>
+
+            <label data-bind="click: assignWorkload" class="load-btn">Назначить</label>
+        </div>
+
+        <div id="currentWorkload">
+            <table-module params="data: currentTeacherWorkloadData, containerName: 'load-module', contextMenuHandler: menuHandler"></table-module>
+        </div>
+    </div>
+</div>
